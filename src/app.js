@@ -15,7 +15,7 @@ liste_questions_et_reponses = {
     "vrai",
   "La View doit surtout afficher les données et contenir le moins de code possible.":
     "vrai",
-  " MVC signifie Mayo View Controller.": "faux",
+  "MVC signifie Mayo View Controller.": "faux",
   "Le Model peut se connecter à une base de données pour récupérer ou stocker des informations.":
     "vrai",
   " La View peut contenir des images, des boutons et du texte pour montrer les informations à l’utilisateur.":
@@ -24,8 +24,7 @@ liste_questions_et_reponses = {
     "vrai",
   "Le Model et la View doivent toujours être liés directement pour que le MVC fonctionne.":
     "vrai",
-  " MVC aide à travailler à plusieurs sur le même projet sans se gêner.":
-    "vrai",
+  "MVC aide à travailler à plusieurs sur le même projet sans se gêner.": "vrai",
   "La View peut demander directement au Model de changer les données.": "faux",
   "MVC est une façon d’organiser le code pour que ce soit plus facile à comprendre.":
     "vrai",
@@ -50,12 +49,21 @@ for (const res in liste_questions_et_reponses) {
   responses.push(res);
 }
 
+let i = 0;
+
 trueBtn.addEventListener("click", () => {
   if (liste_questions_et_reponses[question.innerHTML] === "vrai") {
     score++;
     document.querySelector("#score").innerHTML = score;
   }
-  question.innerHTML = responses[Math.floor(Math.random() * responses.length)];
+  if (i === responses.length - 1) {
+    trueBtn.disabled = true;
+    falseBtn.disabled = true;
+    question.innerHTML = "Vous avez fini le jeu de vrai ou faux !";
+  } else {
+    i = (i + 1) % responses.length;
+    question.innerHTML = responses[i];
+  }
 });
 
 falseBtn.addEventListener("click", () => {
@@ -63,5 +71,12 @@ falseBtn.addEventListener("click", () => {
     score++;
     document.querySelector("#score").innerHTML = score;
   }
-  question.innerHTML = responses[Math.floor(Math.random() * responses.length)];
+  if (i === responses.length - 1) {
+    trueBtn.disabled = true;
+    falseBtn.disabled = true;
+    question.innerHTML = "Vous avez fini le jeu de vrai ou faux !";
+  } else {
+    i = (i + 1) % responses.length;
+    question.innerHTML = responses[i];
+  }
 });
