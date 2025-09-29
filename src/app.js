@@ -20,3 +20,7 @@ liste_questions_et_reponses={
     "On peut utiliser MVC pour créer un site web, un jeu ou une application mobile.":"vrai",
     "Dans MVC, chaque partie a un rôle précis : Model pour les données, View pour l’affichage, Controller pour gérer les actions.":"vrai",
 }
+
+let score = 0
+document.querySelector("#score").innerHTML = score
+document.querySelector("#questions-text")
