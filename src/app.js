@@ -24,3 +24,4 @@ liste_questions_et_reponses={
 let score = 0
 document.querySelector("#score").innerHTML = score
 document.querySelector("#questions-text")
+alert("qsd")
