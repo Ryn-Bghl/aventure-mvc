@@ -16,7 +16,9 @@ button{
   cursor: pointer;
   width: 500px;
   height: 200px;
-  content: fit-width;
+  border: none;
+  filter: drop-shadow(#1A0074AD);
+  border-radius: 25px;
 }
 p{
   font-size: 48px;
