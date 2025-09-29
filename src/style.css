@@ -1,3 +1,27 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-  background-color: grey;
+  background:linear-gradient(#1C0078,#0A0031)  no-repeat;
+  height: 100VH;
+}
+p,button,span,h1{
+  font-family: "Kode Mono";
+  color: white;
+}
+button{
+  background: linear-gradient(#000B73,#5200F5);
+  cursor: pointer;
+  width: 500px;
+  height: 200px;
+  content: fit-width;
+}
+p{
+  font-size: 48px;
+  text-align: center;
+}
+#true,#false{
+  font-size: 5dvw;
 }
