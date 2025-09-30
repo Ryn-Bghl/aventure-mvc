@@ -1,29 +1,115 @@
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-  background:linear-gradient(#1C0078,#0A0031)  no-repeat;
-  height: 100VH;
+    background: linear-gradient(#1C0078, #0A0031) no-repeat;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 p,button,span,h1{
   font-family: "Kode Mono";
   color: white;
 }
-button{
-  background: linear-gradient(#000B73,#5200F5);
-  cursor: pointer;
-  width: 500px;
-  height: 200px;
-  border: none;
-  filter: drop-shadow(#1A0074AD);
-  border-radius: 25px;
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
-p{
-  font-size: 48px;
-  text-align: center;
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #5200F5, 0 0 40px #5200F5, 0 0 50px #5200F5, 0 0 60px #5200F5, 0 0 70px #5200F5;
 }
-#true,#false{
-  font-size: 5dvw;
+
+#questions-container {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+#questions-text {
+    font-size: 1.5rem;
+}
+
+button {
+    background: linear-gradient(#000B73, #5200F5);
+    cursor: pointer;
+    width: 200px;
+    height: 80px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+button:disabled {
+    background: #555;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#start {
+    width: 300px;
+    height: 100px;
+    font-size: 2rem;
+}
+
+#score {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #questions-text {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 150px;
+        height: 70px;
+        font-size: 1.2rem;
+    }
+
+    #start {
+        width: 250px;
+        height: 90px;
+        font-size: 1.8rem;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+    }
 }

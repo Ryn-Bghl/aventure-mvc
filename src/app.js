@@ -1,4 +1,5 @@
-liste_questions_et_reponses = {
+
+const questions = {
   "Dans MVC, le Model sert à garder les informations importantes (comme une base de données).":
     "vrai",
   "La View sert à montrer les informations à l’écran.": "vrai",
@@ -37,46 +38,95 @@ liste_questions_et_reponses = {
 };
 
 let score = 0;
-let question = document.querySelector("#questions-text");
-let trueBtn = document.querySelector("#true");
-let falseBtn = document.querySelector("#false");
+let currentQuestionIndex = 0;
+let questionsOrder = [];
 
-document.querySelector("#score").innerHTML = score;
+const questionText = document.querySelector("#questions-text");
+const scoreDisplay = document.querySelector("#score");
+const trueBtn = document.querySelector("#true");
+const falseBtn = document.querySelector("#false");
+const startBtn = document.querySelector("#start");
 
-const responses = [];
-
-for (const res in liste_questions_et_reponses) {
-  responses.push(res);
+function setupQuestions() {
+  questionsOrder = Object.keys(questions);
 }
 
-let i = 0;
+function renderQuestion(question) {
+  questionText.innerHTML = question;
+}
 
-trueBtn.addEventListener("click", () => {
-  if (liste_questions_et_reponses[question.innerHTML] === "vrai") {
-    score++;
-    document.querySelector("#score").innerHTML = score;
-  }
-  if (i === responses.length - 1) {
-    trueBtn.disabled = true;
-    falseBtn.disabled = true;
-    question.innerHTML = "Vous avez fini le jeu de vrai ou faux !";
-  } else {
-    i = (i + 1) % responses.length;
-    question.innerHTML = responses[i];
-  }
-});
+function renderScore(score) {
+  scoreDisplay.innerHTML = score;
+}
 
-falseBtn.addEventListener("click", () => {
-  if (liste_questions_et_reponses[question.innerHTML] === "faux") {
+function disableButtons() {
+  trueBtn.disabled = true;
+  falseBtn.disabled = true;
+}
+
+function showEndGameMessage() {
+  questionText.innerHTML = "Vous avez fini le jeu de vrai ou faux !";
+}
+
+function checkAnswer(userAnswer) {
+  const currentQuestion = questionsOrder[currentQuestionIndex];
+  const correctAnswer = questions[currentQuestion];
+  if (userAnswer === correctAnswer) {
     score++;
-    document.querySelector("#score").innerHTML = score;
+    return true;
   }
-  if (i === responses.length - 1) {
-    trueBtn.disabled = true;
-    falseBtn.disabled = true;
-    question.innerHTML = "Vous avez fini le jeu de vrai ou faux !";
+  return false;
+}
+
+function getNextQuestion() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questionsOrder.length) {
+    return questionsOrder[currentQuestionIndex];
+  }
+  return null;
+}
+
+function isGameFinished() {
+    return currentQuestionIndex >= questionsOrder.length - 1;
+}
+
+function handleAnswer(userAnswer) {
+  checkAnswer(userAnswer);
+  renderScore(score);
+
+  if (isGameFinished()) {
+    disableButtons();
+    showEndGameMessage();
   } else {
-    i = (i + 1) % responses.length;
-    question.innerHTML = responses[i];
+    const nextQuestion = getNextQuestion();
+    renderQuestion(nextQuestion);
   }
-});
+}
+
+function handleTrueClick() {
+  handleAnswer('vrai');
+}
+
+function handleFalseClick() {
+  handleAnswer('faux');
+}
+
+function handleStartClick() {
+    startBtn.style.display = 'none';
+    document.querySelector('#questions-container').style.display = 'block';
+    trueBtn.style.display = 'inline-block';
+    falseBtn.style.display = 'inline-block';
+    scoreDisplay.style.display = 'inline-block';
+    startGame();
+}
+
+function startGame() {
+  setupQuestions();
+  renderQuestion(questionsOrder[0]);
+  renderScore(score);
+}
+
+trueBtn.addEventListener("click", handleTrueClick);
+falseBtn.addEventListener("click", handleFalseClick);
+startBtn.addEventListener("click", handleStartClick);
+
