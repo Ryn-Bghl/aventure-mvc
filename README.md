@@ -5,7 +5,7 @@
 Un jeu de quiz interactif conçu pour tester et améliorer votre compréhension du modèle d'architecture Modèle-Vue-Contrôleur (MVC).
 
 <!-- Vous pouvez remplacer ceci par une vraie capture d'écran de votre jeu ! -->
-![Aperçu du jeu](./src/images/website preview.png)
+![Aperçu du jeu](https://raw.githubusercontent.com/Ryn-Bghl/vrai-faux-php-mvc/refs/heads/main/src/images/website%20preview.png)
 
 ---
 
