@@ -1,72 +1,67 @@
-# 🎮 Vrai ou Faux: PHP MVC Edition
+# 🎮 Vrai ou Faux: Édition PHP MVC
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Licence: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-An interactive quiz game designed to test and improve your understanding of the Model-View-Controller (MVC) architectural pattern.
+Un jeu de quiz interactif conçu pour tester et améliorer votre compréhension du modèle d'architecture Modèle-Vue-Contrôleur (MVC).
 
-<!-- You can replace this with a real screenshot of your game! -->
-![Game Screenshot Placeholder](https://via.placeholder.com/720x400.png?text=Vrai+ou+Faux+MVC+Game)
+<!-- Vous pouvez remplacer ceci par une vraie capture d'écran de votre jeu ! -->
+![Aperçu du jeu](./src/images/website preview.png)
 
 ---
 
-## 🎯 Project Goal
+## 🎯 Objectif du Projet
 
-This project serves as a practical exercise in software architecture. The initial version intentionally places all application logic within a single JavaScript file (`src/app.js`).
+Ce projet est un jeu de quiz "Vrai ou Faux" servant d'exercice pratique pour introduire l'architecture logicielle MVC (Modèle-Vue-Contrôleur) à des étudiants de première année, avec un focus sur son implémentation en PHP.
 
-The primary goal is to **refactor this code** into a clean and maintainable MVC architecture, separating concerns into three distinct components:
--   **Model (`model.js`):** To manage the application's data (the questions, the current score).
--   **View (`view.js`):** To handle the presentation logic and what the user sees.
--   **Controller (`controller.js`):** To act as the intermediary, handling user input and updating the model and view accordingly.
+## ✨ Fonctionnalités
 
-## ✨ Features
+-   Une série de questions vrai/faux sur les concepts fondamentaux de MVC.
+-   Retour instantané sur vos réponses.
+-   Suivi du score en temps réel.
+-   Interface utilisateur simple, propre et réactive, construite avec des technologies web vanilles.
 
--   A series of true/false questions about core MVC concepts.
--   Instant feedback on your answers.
--   Real-time score tracking.
--   Simple, clean, and responsive UI built with vanilla web technologies.
+## 🛠️ Technologies Utilisées
 
-## 🛠️ Tech Stack
+-   **Frontend :** HTML5, CSS3, JavaScript (ES6+) vanilles
+-   **Outils :** Aucun outil de build ou bibliothèque externe requis.
 
--   **Frontend:** Vanilla HTML5, CSS3, JavaScript (ES6+)
--   **Tooling:** No build tools or external libraries required.
+## 🚀 Démarrage
 
-## 🚀 Getting Started
+Aucune configuration complexe n'est nécessaire !
 
-No complex setup needed!
-
-1.  **Clone the repository:**
+1.  **Clonez le dépôt :**
     ```bash
-    git clone https://github.com/your-username/vrai-faux-php-mvc.git
+    git clone https://github.com/votre-nom-utilisateur/vrai-faux-php-mvc.git
     ```
-2.  **Navigate to the directory:**
+2.  **Naviguez jusqu'au répertoire :**
     ```bash
     cd vrai-faux-php-mvc
     ```
-3.  **Open the application:**
-    Simply open the `src/index.html` file in your favorite web browser.
+3.  **Ouvrez l'application :**
+    Ouvrez simplement le fichier `src/index.html` dans votre navigateur web préféré.
 
-## 🕹️ How to Play
+## 🕹️ Comment Jouer
 
-1.  Click the **"Commencer"** button to start the quiz.
-2.  Read the statement displayed on the screen.
-3.  Select **"Vrai"** (True) or **"Faux"** (False).
-4.  Your score will be updated, and the next question will appear automatically.
-5.  A completion message will be shown at the end of the quiz.
+1.  Cliquez sur le bouton **"Commencer"** pour démarrer le quiz.
+2.  Lisez l'affirmation affichée à l'écran.
+3.  Sélectionnez **"Vrai"** ou **"Faux"**.
+4.  Votre score sera mis à jour et la question suivante apparaîtra automatiquement.
+5.  Un message de fin s'affichera à la fin du quiz.
 
-## 🤝 How to Contribute
+## 🤝 Comment Contribuer
 
-This project is perfect for learning and practicing MVC! Contributions are highly encouraged, especially for the main refactoring task.
+Les contributions pour améliorer le jeu ou ajouter du contenu sont les bienvenues !
 
-1.  **Fork the Repository.**
-2.  **Create a new Branch:** `git checkout -b feature/mvc-refactor`
-3.  **Make your changes:** The main task is to move the logic from `src/app.js` into `src/model.js`, `src/view.js`, and `src/controller.js`.
-4.  **Commit your changes:** `git commit -m 'feat: Refactor logic to MVC pattern'`
-5.  **Push to the Branch:** `git push origin feature/mvc-refactor`
-6.  **Open a Pull Request** with a clear description of your changes.
+1.  **Forkez le dépôt.**
+2.  **Créez une nouvelle branche** pour votre modification (`git checkout -b feature/mon-amelioration`).
+3.  **Faites vos modifications.**
+4.  **Commitez vos changements** (`git commit -m 'feat: Mon amélioration'`).
+5.  **Poussez vers la branche** (`git push origin feature/mon-amelioration`).
+6.  **Ouvrez une Pull Request.**
 
-## 📄 License
+## 📄 Licence
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ---
-*Built by _Duck-Noris_ as a fun way to learn software architecture.*
+*Construit par _Duck-Noris_ comme un moyen amusant d'apprendre l'architecture logicielle.*
