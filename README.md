@@ -2,14 +2,6 @@
 
 Ce projet est un jeu de Vrai ou Faux conçu pour illustrer l'architecture Modèle-Vue-Contrôleur (MVC) en JavaScript. Le but est de répondre à une série de questions sur le pattern MVC.
 
-## Architecture MVC
-
-Le projet est structuré en trois composants principaux pour séparer les responsabilités :
-
-- **Modèle (model.js)** : Gère les données de l'application. Il contient les questions, les réponses, et la logique pour vérifier les réponses et suivre le score.
-- **Vue (view.js)** : Gère l'interface utilisateur. Elle affiche les questions, met à jour le score, et gère les interactions avec les boutons.
-- **Contrôleur (controller.js)** : Fait le lien entre le Modèle et la Vue. Il gère les actions de l'utilisateur, met à jour le modèle en conséquence, et rafraîchit la vue.
-
 ## Comment jouer
 
 1.  Ouvrez le fichier `src/index.html` dans votre navigateur.
@@ -25,9 +17,12 @@ Le projet est structuré en trois composants principaux pour séparer les respon
 ├── src
 │   ├── index.html
 │   ├── style.css
-│   ├── model.js
-│   ├── view.js
-│   └── controller.js
+│   ├── app.js
+│   ├── model.js (vide)
+│   ├── view.js (vide)
+│   └── controller.js (vide)
 ├── .gitignore
 └── README.md
 ```
+
+**Note:** Actuellement, toute la logique du jeu est contenue dans `app.js`. Les fichiers `model.js`, `view.js`, et `controller.js` sont des coquilles vides, prévues pour une future refactorisation du code afin de suivre le modèle de conception MVC.
