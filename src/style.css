@@ -66,7 +66,7 @@ button:hover {
 }
 
 button:disabled {
-    background: #555;
+    /* background: #555; */
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
