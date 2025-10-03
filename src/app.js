@@ -120,6 +120,7 @@ function handleFalseClick() {
 
 function handleStartClick() {
   startBtn.style.display = "none";
+  timerDisplay.style.display = "inline-block";
   document.querySelector("#questions-container").style.display = "block";
   trueBtn.style.display = "inline-block";
   falseBtn.style.display = "inline-block";
