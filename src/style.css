@@ -2,21 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Kode Mono;
+    color: white;
 }
 
 body {
     background: linear-gradient(#1C0078, #0A0031) no-repeat;
     height: 100vh;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
+    height: 100dvh;
 }
 
-p,button,span,h1{
-  font-family: "Kode Mono";
-  color: white;
+header {
+    padding: 1.5rem;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 main {
@@ -26,13 +33,21 @@ main {
     gap: 2rem;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 h1 {
     font-size: 3rem;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #5200F5, 0 0 40px #5200F5, 0 0 50px #5200F5, 0 0 60px #5200F5, 0 0 70px #5200F5;
+    /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #5200F5, 0 0 40px #5200F5, 0 0 50px #5200F5, 0 0 60px #5200F5, 0 0 70px #5200F5; */
 }
 
 #questions-container {
-    background: rgba(0, 0, 0, 0.2);
     padding: 2rem;
     border-radius: 15px;
     min-height: 150px;
@@ -41,6 +56,12 @@ h1 {
     align-items: center;
     width: 80%;
     max-width: 800px;
+}
+
+#timer {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: #FFD700;
 }
 
 #questions-text {

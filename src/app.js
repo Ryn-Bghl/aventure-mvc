@@ -46,6 +46,11 @@ const trueBtn = document.querySelector("#true");
 const falseBtn = document.querySelector("#false");
 const startBtn = document.querySelector("#start");
 const restartBtn = document.querySelector("#restart");
+const questionCounter = document.querySelector("#question-counter");
+const timerDisplay = document.querySelector("#timer");
+let timerInterval = null;
+const QUESTION_TIME = 10; // seconds per question
+let timeLeft = QUESTION_TIME;
 
 function setupQuestions() {
   questionsOrder = Object.keys(questions);
@@ -53,6 +58,8 @@ function setupQuestions() {
 
 function renderQuestion(question) {
   questionText.innerHTML = question;
+  renderQuestionCounter(currentQuestionIndex + 1, questionsOrder.length);
+  startTimer();
 }
 
 function renderScore(score) {
@@ -64,6 +71,8 @@ function showEndGameMessage() {
   trueBtn.style.display = "none";
   falseBtn.style.display = "none";
   restartBtn.style.display = "inline-block";
+  timerDisplay.innerHTML = "";
+  clearTimer();
 }
 
 function checkAnswer(userAnswer) {
@@ -89,6 +98,7 @@ function isGameFinished() {
 }
 
 function handleAnswer(userAnswer) {
+  clearTimer();
   checkAnswer(userAnswer);
   renderScore(score);
 
@@ -115,7 +125,15 @@ function handleStartClick() {
   falseBtn.style.display = "inline-block";
   scoreDisplay.style.display = "inline-block";
   restartBtn.style.display = "none";
-  startGame();
+  score = 0; // Ensure score is reset
+  currentQuestionIndex = 0; // Ensure index is reset
+  setupQuestions();
+  renderScore(score);
+  renderQuestion(questionsOrder[currentQuestionIndex]);
+}
+
+function renderQuestionCounter(current, total) {
+  questionCounter.innerHTML = `Question ${current} / ${total}`;
 }
 
 function restartGame() {
@@ -127,12 +145,42 @@ function restartGame() {
   trueBtn.style.display = "inline-block";
   falseBtn.style.display = "inline-block";
   restartBtn.style.display = "none";
+  renderQuestionCounter(1, questionsOrder.length);
+  startTimer();
 }
 
-function startGame() {
-  setupQuestions();
-  renderQuestion(questionsOrder[0]);
-  renderScore(score);
+// Start the timer for each question
+function startTimer() {
+  clearTimer();
+  timeLeft = QUESTION_TIME;
+  timerDisplay.innerHTML = `⏰ ${timeLeft}s`;
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    timerDisplay.innerHTML = `⏰ ${timeLeft}s`;
+    if (timeLeft <= 0) {
+      clearTimer();
+      handleTimeout();
+    }
+  }, 1000);
+}
+
+function clearTimer() {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+}
+
+// When time runs out, go to next question (no score increment)
+function handleTimeout() {
+  if (isGameFinished()) {
+    showEndGameMessage();
+  } else {
+    getNextQuestion();
+    renderQuestion(questionsOrder[currentQuestionIndex]);
+    renderScore(score);
+    startTimer();
+  }
 }
 
 trueBtn.addEventListener("click", handleTrueClick);
