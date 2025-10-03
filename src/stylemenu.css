@@ -4,46 +4,53 @@
     box-sizing: border-box;
     font-family: Kode Mono;
     color: white;
-    
+
 }
-body{
-    overflow-y: hidden;
+
+body {
+    overflow: hidden
 }
-#divimages{
+
+#divimages {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 100dvh;
 }
-#carre img{
+
+#carre img {
     height: 500px;
     width: 500px;
     grid-column: 1/2;
     position: relative;
-    
     bottom: -35%;
     z-index: -1;
 }
+
 #carre p {
     color: black;
 }
-#triangle img{
+
+#triangle img {
     height: 500px;
     width: 500px;
     grid-column: 2/3;
     position: relative;
     bottom: -35%;
     right: -6%;
-    
+
 }
-#triangle p{
+
+#triangle p {
     color: black;
-    
+
 }
-#balle p{
+
+#balle p {
     color: black;
-    
+
 }
-#balle img{
+
+#balle img {
     height: 500px;
     width: 500px;
     grid-column: 3/4;
@@ -51,6 +58,7 @@ body{
     bottom: -35%;
     right: -22%;
 }
-#carre{
-    background: linear-gradient(#FFFDFD4F 31% ,#0F006554 33%,#00000080 50%);
+
+#carre {
+    background: linear-gradient(#FFFDFD4F 31%, #0F006554 33%, #00000080 50%);
 }
