@@ -84,7 +84,6 @@ h1 {
 
 #timer {
     font-size: 1.5rem;
-    margin-left: 1rem;
     color: #FFD700;
 }
 
@@ -136,8 +135,8 @@ button:disabled {
 #timer {
     align-self: center;
     padding: 2%;
-    border:  white solid;
-   
+    border: white solid;
+
 
 }
 

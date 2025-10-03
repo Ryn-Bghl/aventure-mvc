@@ -71,7 +71,7 @@ function showEndGameMessage() {
   trueBtn.style.display = "none";
   falseBtn.style.display = "none";
   restartBtn.style.display = "inline-block";
-  timerDisplay.innerHTML = "";
+  timerDisplay.style.display = "none";
   clearTimer();
 }
 
