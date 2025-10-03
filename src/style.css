@@ -108,6 +108,11 @@ button:disabled {
     display: flex;
     gap: 2rem;
 }
+#timer{
+    align-self: center;
+    border:  white solid;
+    
+}
 
 @media (max-width: 768px) {
     h1 {
