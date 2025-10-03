@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Kode Mono;
+    color: white;
+    
+}
+body{
+    overflow-y: hidden;
+}
+#divimages{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100dvh;
+}
+#carre img{
+    height: 500px;
+    width: 500px;
+    grid-column: 1/2;
+    position: relative;
+    
+    bottom: -35%;
+    z-index: -1;
+}
+#carre p {
+    color: black;
+}
+#triangle img{
+    height: 500px;
+    width: 500px;
+    grid-column: 2/3;
+    position: relative;
+    bottom: -35%;
+    right: -6%;
+    
+}
+#triangle p{
+    color: black;
+    
+}
+#balle p{
+    color: black;
+    
+}
+#balle img{
+    height: 500px;
+    width: 500px;
+    grid-column: 3/4;
+    position: relative;
+    bottom: -35%;
+    right: -22%;
+}
+#carre{
+    background: linear-gradient(#FFFDFD4F 31% ,#0F006554 33%,#00000080 50%);
+}
