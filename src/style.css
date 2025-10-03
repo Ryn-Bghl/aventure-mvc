@@ -6,6 +6,30 @@
     color: white;
 }
 
+:root {
+    /* font size */
+    --font-size-small: 1rem;
+    --font-size-medium: 1.5rem;
+    --font-size-large: 2rem;
+
+
+    /* colors */
+    --color-primary: #1C0078;
+    --color-secondary: #0A0031;
+    --color-accent: #FFD700;
+    --color-text: white;
+
+    /* spacing */
+    --spacing-small: 1rem;
+    --spacing-medium: 2rem;
+    --spacing-large: 4rem;
+    /* border radius */
+    --border-radius-small: 10px;
+    --border-radius-medium: 15px;
+    --border-radius-large: 20px;
+
+}
+
 body {
     background: linear-gradient(#1C0078, #0A0031) no-repeat;
     height: 100vh;
@@ -108,10 +132,11 @@ button:disabled {
     display: flex;
     gap: 2rem;
 }
-#timer{
+
+#timer {
     align-self: center;
-    border:  white solid;
-    
+    border: white solid;
+
 }
 
 @media (max-width: 768px) {
