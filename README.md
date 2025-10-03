@@ -1,100 +1,70 @@
-# 🎮 Vrai ou Faux: Édition PHP MVC
+# 🧭 AVENTURE MVC – Explorer l’architecture Modèle-Vue-Contrôleur
 
 [![Licence: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Un **quiz interactif** conçu pour apprendre et tester vos connaissances sur l’architecture logicielle **Modèle–Vue–Contrôleur (MVC)**, présenté de manière simple et ludique pour les étudiants débutants en PHP.
-
-![Aperçu du jeu](https://raw.githubusercontent.com/Ryn-Bghl/vrai-faux-php-mvc/refs/heads/main/src/images/website%20preview.png)
-
----
-
-## 🎯 Objectifs du Projet
-
-* 📚 **Apprentissage** : Introduire les bases du MVC à des étudiants **BUT1 MMI** n’ayant jamais touché au code.
-* 🎲 **Pédagogie active** : Offrir une activité ludique de type *vrai/faux* avec correction instantanée.
-* 🖥️ **Application pratique** : Montrer comment un site web peut être structuré simplement autour du concept MVC.
+**AVENTURE MVC** est une application **HTML / CSS / JavaScript** qui propose un parcours pédagogique gamifié pour découvrir l’architecture **Modèle-Vue-Contrôleur (MVC)**.  
+À travers des mini-cours, quiz et jeux interactifs, tu progresses pas à pas dans une aventure qui mêle théorie et pratique.
 
 ---
 
-## ✨ Fonctionnalités
-
-* ✅ Série de questions **Vrai/Faux** sur les concepts fondamentaux du MVC.
-* ⚡ Retour **instantané** et feedback pédagogique pour chaque réponse.
-* 📊 Suivi du score en temps réel.
-* 📱 Interface claire, responsive et accessible.
-* 🧩 Mini-résumé final pour ancrer les apprentissages.
+## ✨ Objectifs
+- Comprendre le rôle du **Modèle**, de la **Vue** et du **Contrôleur**  
+- Découvrir les échanges entre les trois parties dans une architecture MVC  
+- Identifier et corriger les erreurs fréquentes  
+- Apprendre de manière **ludique et interactive**  
 
 ---
 
-## 🛠️ Technologies
-
-* **Frontend** : HTML5, CSS3, JavaScript (ES6+)
-* **Backend (optionnel)** : PHP (structure MVC simplifiée si vous souhaitez étendre le projet)
-* **Outils** : Aucun build tool ou framework requis → 100% *vanilla*.
-
----
-
-## 🚀 Installation & Démarrage
-
-### 1. Cloner le projet
-
-```bash
-git clone https://github.com/votre-nom-utilisateur/vrai-faux-php-mvc.git
-cd vrai-faux-php-mvc
-```
-
-### 2. Lancer l’application
-
-* **Option rapide** : Ouvrir `src/index.html` dans votre navigateur.
+## 📚 Modules inclus
+1. **Introduction au MVC** – Mise en contexte et principes généraux  
+2. **Le Modèle** – Données et logique métier  
+3. **La Vue** – Présentation et affichage  
+4. **Le Contrôleur** – Coordination et interactions  
+5. **Cycle MVC** – Communication complète  
+6. **Erreurs fréquentes** – Corriger les bugs conceptuels  
+7. **Étude de cas** – Exemple d’application MVC  
 
 ---
 
-## 🕹️ Comment Jouer
-
-1. Cliquez sur **“Commencer”** pour lancer le quiz.
-2. Lisez l’affirmation affichée.
-3. Sélectionnez **Vrai** ou **Faux**.
-4. Obtenez un retour immédiat et passez à la question suivante.
-5. Découvrez votre score final et un résumé des rôles **Modèle / Vue / Contrôleur**.
+## 🎮 Jeux & Activités
+- **Quiz Vrai/Faux** – Pour tester tes connaissances  
+- **Scénarios interactifs** – Choisir la bonne action pour avancer  
+- **Corrections de bugs** – Identifier les erreurs dans des exemples  
+- **Mini-projets guidés** – Simuler une application MVC  
 
 ---
 
-## 👩‍🏫 Pour les enseignants
+## 🚀 Installation & Lancement
 
-* Ce projet peut être utilisé comme **activité interactive en classe**.
-* Idéal pour introduire l’architecture MVC **sans entrer dans le code**.
-* Peut être combiné avec un schéma explicatif et une fiche mémo PDF.
+1. Clone ou télécharge le dépôt :
+   ```bash
+   git clone https://github.com/ton-profil/aventure-mvc.git
+   cd aventure-mvc
+   ```
+   ```
 
----
+2. Ouvre directement le fichier :
 
-## 🤝 Contribution
-
-Les contributions sont bienvenues !
-
-1. Forkez le dépôt
-2. Créez une branche (`git switch -c feature/mon-amelioration`)
-3. Faites vos modifications
-4. Committez (`git commit -m 'feat: Ajout nouvelle question'`)
-5. Poussez (`git push origin feature/mon-amelioration`)
-6. Ouvrez une **Pull Request**
+  ```bash
+  start src/index.html
+  ```
 
 ---
 
-## 🗺️ Roadmap (idées futures)
+## 🎨 Particularités
 
-* 🔹 Ajout d’un mini-exercice de tri (associer action → MVC).
-* 🔹 Mode multi-joueur (score par groupe).
-* 🔹 Base de données de questions pour enrichir le contenu.
-* 🔹 Export des résultats en PDF.
+* Interface pensée comme une **aventure pédagogique**
+* **Mascotte insecte 🐞** en clin d’œil aux “bugs”
 
 ---
 
-## 👥 Équipe
+## 📜 Licence
 
-Projet réalisé par une équipe d’étudiants BUT MMI pour un exercice pédagogique.
+Projet distribué sous licence MIT – libre à utiliser, modifier et partager.
 
 ---
 
-## 📄 Licence
+## 🙌 Contribuer
 
-Ce projet est sous licence [MIT](LICENSE).
+Tu veux enrichir l’aventure (quiz, missions, visuels, corrections) ?
+N’hésite pas à proposer une *issue* ou une *pull request* !
