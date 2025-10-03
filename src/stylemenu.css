@@ -28,6 +28,7 @@ body {
 
 #carre p {
     color: black;
+    text-align: center;
 }
 
 #triangle img {
@@ -42,12 +43,12 @@ body {
 
 #triangle p {
     color: black;
-
+    
 }
 
 #balle p {
     color: black;
-
+    
 }
 
 #balle img {
