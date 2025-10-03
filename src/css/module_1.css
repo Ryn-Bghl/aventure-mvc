@@ -7,12 +7,12 @@
 
 /* CURSOR SETUP */
 html {
-    cursor: url("./images/cursor.png"), auto;
+    cursor: url("../images/cursor.png"), auto;
 }
 
 button,
 a {
-    cursor: url("./images/hover_cursor.png"), auto;
+    cursor: url("../images/hover_cursor.png"), auto;
 }
 
 /* CSS ENV VARIABLES */
@@ -35,4 +35,16 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-family);
+}
+
+header h1 {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem
+}
+
+.pixelarticons--book-open {
+    height: 50px !important;
+    width: 50px !important;
 }

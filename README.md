@@ -15,7 +15,7 @@
 
 ---
 
-## 📚 Modules inclus
+## 📚 Chapitres inclus
 1. **Introduction au MVC** – Mise en contexte et principes généraux  
 2. **Le Modèle** – Données et logique métier  
 3. **La Vue** – Présentation et affichage  
