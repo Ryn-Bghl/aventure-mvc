@@ -41,7 +41,6 @@
    git clone https://github.com/ton-profil/aventure-mvc.git
    cd aventure-mvc
    ```
-   ```
 
 2. Ouvre directement le fichier :
 
