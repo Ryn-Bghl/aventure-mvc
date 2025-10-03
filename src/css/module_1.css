@@ -48,3 +48,40 @@ header h1 {
     height: 50px !important;
     width: 50px !important;
 }
+
+.pixelarticons--arrow-left,
+.pixelarticons--arrow-right {
+    height: 30px !important;
+    width: 30px !important;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.navigation a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navigation a:hover {
+    animation: press-blink 1s steps(1) infinite;
+}
+
+@keyframes press-blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
