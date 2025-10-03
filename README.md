@@ -2,65 +2,106 @@
 
 [![Licence: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Un jeu de quiz interactif conçu pour tester et améliorer votre compréhension du modèle d'architecture Modèle-Vue-Contrôleur (MVC).
+Un **quiz interactif** conçu pour apprendre et tester vos connaissances sur l’architecture logicielle **Modèle–Vue–Contrôleur (MVC)**, présenté de manière simple et ludique pour les étudiants débutants en PHP.
 
 ![Aperçu du jeu](https://raw.githubusercontent.com/Ryn-Bghl/vrai-faux-php-mvc/refs/heads/main/src/images/website%20preview.png)
 
 ---
 
-## 🎯 Objectif du Projet
+## 🎯 Objectifs du Projet
 
-Ce projet est un jeu de quiz "Vrai ou Faux" servant d'exercice pratique pour introduire l'architecture logicielle MVC (Modèle-Vue-Contrôleur) à des étudiants de première année, avec un focus sur son implémentation en PHP.
+* 📚 **Apprentissage** : Introduire les bases du MVC à des étudiants **BUT1 MMI** n’ayant jamais touché au code.
+* 🎲 **Pédagogie active** : Offrir une activité ludique de type *vrai/faux* avec correction instantanée.
+* 🖥️ **Application pratique** : Montrer comment un site web peut être structuré simplement autour du concept MVC.
+
+---
 
 ## ✨ Fonctionnalités
 
--   Une série de questions vrai/faux sur les concepts fondamentaux de MVC.
--   Retour instantané sur vos réponses.
--   Suivi du score en temps réel.
--   Interface utilisateur simple, propre et réactive, construite avec des technologies web vanilles.
+* ✅ Série de questions **Vrai/Faux** sur les concepts fondamentaux du MVC.
+* ⚡ Retour **instantané** et feedback pédagogique pour chaque réponse.
+* 📊 Suivi du score en temps réel.
+* 📱 Interface claire, responsive et accessible.
+* 🧩 Mini-résumé final pour ancrer les apprentissages.
 
-## 🛠️ Technologies Utilisées
+---
 
--   **Frontend :** HTML5, CSS3, JavaScript (ES6+) vanilles
--   **Outils :** Aucun outil de build ou bibliothèque externe requis.
+## 🛠️ Technologies
 
-## 🚀 Démarrage
+* **Frontend** : HTML5, CSS3, JavaScript (ES6+)
+* **Backend (optionnel)** : PHP (structure MVC simplifiée si vous souhaitez étendre le projet)
+* **Outils** : Aucun build tool ou framework requis → 100% *vanilla*.
 
-Aucune configuration complexe n'est nécessaire !
+---
 
-1.  **Clonez le dépôt :**
-    ```bash
-    git clone https://github.com/votre-nom-utilisateur/vrai-faux-php-mvc.git
-    ```
-2.  **Naviguez jusqu'au répertoire :**
-    ```bash
-    cd vrai-faux-php-mvc
-    ```
-3.  **Ouvrez l'application :**
-    Ouvrez simplement le fichier `src/index.html` dans votre navigateur web préféré.
+## 🚀 Installation & Démarrage
+
+### 1. Cloner le projet
+
+```bash
+git clone https://github.com/votre-nom-utilisateur/vrai-faux-php-mvc.git
+cd vrai-faux-php-mvc
+```
+
+### 2. Lancer l’application
+
+* **Option rapide** : Ouvrir `src/index.html` dans votre navigateur.
+* **Option PHP locale** :
+
+  ```bash
+  php -S localhost:8000 -t src
+  ```
+
+  Puis ouvrez [http://localhost:8000](http://localhost:8000) dans votre navigateur.
+
+---
 
 ## 🕹️ Comment Jouer
 
-1.  Cliquez sur le bouton **"Commencer"** pour démarrer le quiz.
-2.  Lisez l'affirmation affichée à l'écran.
-3.  Sélectionnez **"Vrai"** ou **"Faux"**.
-4.  Votre score sera mis à jour et la question suivante apparaîtra automatiquement.
-5.  Un message de fin s'affichera à la fin du quiz.
+1. Cliquez sur **“Commencer”** pour lancer le quiz.
+2. Lisez l’affirmation affichée.
+3. Sélectionnez **Vrai** ou **Faux**.
+4. Obtenez un retour immédiat et passez à la question suivante.
+5. Découvrez votre score final et un résumé des rôles **Modèle / Vue / Contrôleur**.
 
-## 🤝 Comment Contribuer
+---
 
-Les contributions pour améliorer le jeu ou ajouter du contenu sont les bienvenues !
+## 👩‍🏫 Pour les enseignants
 
-1.  **Forkez le dépôt.**
-2.  **Créez une nouvelle branche** pour votre modification (`git checkout -b feature/mon-amelioration`).
-3.  **Faites vos modifications.**
-4.  **Commitez vos changements** (`git commit -m 'feat: Mon amélioration'`).
-5.  **Poussez vers la branche** (`git push origin feature/mon-amelioration`).
-6.  **Ouvrez une Pull Request.**
+* Ce projet peut être utilisé comme **activité interactive en classe**.
+* Idéal pour introduire l’architecture MVC **sans entrer dans le code**.
+* Peut être combiné avec un schéma explicatif et une fiche mémo PDF.
+
+---
+
+## 🤝 Contribution
+
+Les contributions sont bienvenues !
+
+1. Forkez le dépôt
+2. Créez une branche (`git checkout -b feature/mon-amelioration`)
+3. Faites vos modifications
+4. Committez (`git commit -m 'feat: Ajout nouvelle question'`)
+5. Poussez (`git push origin feature/mon-amelioration`)
+6. Ouvrez une **Pull Request**
+
+---
+
+## 🗺️ Roadmap (idées futures)
+
+* 🔹 Ajout d’un mini-exercice de tri (associer action → MVC).
+* 🔹 Mode multi-joueur (score par groupe).
+* 🔹 Base de données de questions pour enrichir le contenu.
+* 🔹 Export des résultats en PDF.
+
+---
+
+## 👥 Équipe
+
+Projet réalisé par une équipe d’étudiants BUT MMI pour un exercice pédagogique.
+
+---
 
 ## 📄 Licence
 
-Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
-
----
-*Construit par _Duck-Noris_ comme un moyen amusant d'apprendre l'architecture logicielle.*
+Ce projet est sous licence [MIT](LICENSE).
