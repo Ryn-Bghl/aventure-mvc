@@ -30,6 +30,14 @@
 
 }
 
+html {
+    cursor: url("./images/cursor.png"), auto !important;
+}
+
+button {
+    cursor: url("./images/hover_cursor.png"), auto !important;
+}
+
 body {
     background: linear-gradient(#1C0078, #0A0031) no-repeat;
     height: 100vh;
