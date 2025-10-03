@@ -111,7 +111,7 @@ button:disabled {
 #timer{
     align-self: center;
     border:  white solid;
-    
+    padding: 2%;
 }
 
 @media (max-width: 768px) {
