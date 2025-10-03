@@ -1,4 +1,3 @@
-
 const questions = {
   "Dans MVC, le Model sert à garder les informations importantes (comme une base de données).":
     "vrai",
@@ -46,6 +45,7 @@ const scoreDisplay = document.querySelector("#score");
 const trueBtn = document.querySelector("#true");
 const falseBtn = document.querySelector("#false");
 const startBtn = document.querySelector("#start");
+const restartBtn = document.querySelector("#restart");
 
 function setupQuestions() {
   questionsOrder = Object.keys(questions);
@@ -59,13 +59,11 @@ function renderScore(score) {
   scoreDisplay.innerHTML = score;
 }
 
-function disableButtons() {
-  trueBtn.disabled = true;
-  falseBtn.disabled = true;
-}
-
 function showEndGameMessage() {
   questionText.innerHTML = "Vous avez fini le jeu de vrai ou faux !";
+  trueBtn.style.display = "none";
+  falseBtn.style.display = "none";
+  restartBtn.style.display = "inline-block";
 }
 
 function checkAnswer(userAnswer) {
@@ -87,7 +85,7 @@ function getNextQuestion() {
 }
 
 function isGameFinished() {
-    return currentQuestionIndex >= questionsOrder.length - 1;
+  return currentQuestionIndex >= questionsOrder.length - 1;
 }
 
 function handleAnswer(userAnswer) {
@@ -95,7 +93,6 @@ function handleAnswer(userAnswer) {
   renderScore(score);
 
   if (isGameFinished()) {
-    disableButtons();
     showEndGameMessage();
   } else {
     const nextQuestion = getNextQuestion();
@@ -104,20 +101,32 @@ function handleAnswer(userAnswer) {
 }
 
 function handleTrueClick() {
-  handleAnswer('vrai');
+  handleAnswer("vrai");
 }
 
 function handleFalseClick() {
-  handleAnswer('faux');
+  handleAnswer("faux");
 }
 
 function handleStartClick() {
-    startBtn.style.display = 'none';
-    document.querySelector('#questions-container').style.display = 'block';
-    trueBtn.style.display = 'inline-block';
-    falseBtn.style.display = 'inline-block';
-    scoreDisplay.style.display = 'inline-block';
-    startGame();
+  startBtn.style.display = "none";
+  document.querySelector("#questions-container").style.display = "block";
+  trueBtn.style.display = "inline-block";
+  falseBtn.style.display = "inline-block";
+  scoreDisplay.style.display = "inline-block";
+  restartBtn.style.display = "none";
+  startGame();
+}
+
+function restartGame() {
+  score = 0;
+  currentQuestionIndex = 0;
+  setupQuestions();
+  renderQuestion(questionsOrder[0]);
+  renderScore(score);
+  trueBtn.style.display = "inline-block";
+  falseBtn.style.display = "inline-block";
+  restartBtn.style.display = "none";
 }
 
 function startGame() {
@@ -129,4 +138,4 @@ function startGame() {
 trueBtn.addEventListener("click", handleTrueClick);
 falseBtn.addEventListener("click", handleFalseClick);
 startBtn.addEventListener("click", handleStartClick);
-
+restartBtn.addEventListener("click", restartGame);
