@@ -153,10 +153,10 @@ function restartGame() {
 function startTimer() {
   clearTimer();
   timeLeft = QUESTION_TIME;
-  timerDisplay.innerHTML = `⏰ ${timeLeft}s`;
+  timerDisplay.innerHTML = `${timeLeft}s`;
   timerInterval = setInterval(() => {
     timeLeft--;
-    timerDisplay.innerHTML = `⏰ ${timeLeft}s`;
+    timerDisplay.innerHTML = `${timeLeft}s`;
     if (timeLeft <= 0) {
       clearTimer();
       handleTimeout();
