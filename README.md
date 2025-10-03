@@ -46,13 +46,6 @@ cd vrai-faux-php-mvc
 ### 2. Lancer l’application
 
 * **Option rapide** : Ouvrir `src/index.html` dans votre navigateur.
-* **Option PHP locale** :
-
-  ```bash
-  php -S localhost:8000 -t src
-  ```
-
-  Puis ouvrez [http://localhost:8000](http://localhost:8000) dans votre navigateur.
 
 ---
 
@@ -79,7 +72,7 @@ cd vrai-faux-php-mvc
 Les contributions sont bienvenues !
 
 1. Forkez le dépôt
-2. Créez une branche (`git checkout -b feature/mon-amelioration`)
+2. Créez une branche (`git switch -c feature/mon-amelioration`)
 3. Faites vos modifications
 4. Committez (`git commit -m 'feat: Ajout nouvelle question'`)
 5. Poussez (`git push origin feature/mon-amelioration`)
