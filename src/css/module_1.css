@@ -34,6 +34,7 @@ a {
 body {
     background: url("/src/images/background1.png");
     background-repeat: no-repeat;
+    background-size: 80%;
     color: var(--text-color);
     font-family: var(--font-family);
 }
@@ -44,7 +45,8 @@ p{
     margin-left: 30px;
     margin-right: 30px;
     text-align: center;
-    border: 15px solid black;
+    border: 10px solid black;
+    border-radius: 10px;
 }
 
 header h1 {
