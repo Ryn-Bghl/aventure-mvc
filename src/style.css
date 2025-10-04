@@ -21,7 +21,7 @@ a {
     --font-family-2: "Jersey 10", sans-serif;
     --bg-color: #222831;
     --bg-color-alt: #1c1c1c;
-    --text-color: #eeeeee;
+    --text-color: #FFCA1C;
     --text-color-alt: #393e46;
     --primary-color: #00adb5;
     --primary-color-alt: #0096c5;
@@ -30,9 +30,13 @@ a {
     --accent-color: #ff7f00;
     --accent-color-alt: #ffc107;
 }
-
+p{
+    text-align: center;
+}
 body {
-    background-color: var(--bg-color);
+    background-image: url("images/background3.png"  ) ;/* besoin d'aide la dessus l'image ne prends pas toute la place ou deviens coupé en étant trop grosse*/
+    background-repeat: no-repeat;
+    
     color: var(--text-color);
     font-family: var(--font-family);
 }
@@ -48,6 +52,10 @@ body {
     padding: 2rem;
     background-color: var(--text-color);
     font-family: var(--font-family-2);
+    border: black solid;;
+     border-width: 12px 11px 10px 0px;
+
+
 }
 
 #hercule-popup picture {
@@ -72,10 +80,12 @@ main {
 }
 
 h1 {
+    padding-top: 10px;
     font-size: 4rem;
     text-transform: uppercase;
     width: min-content;
     text-align: center;
+    text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
 }
 
 #start-game-btn {
@@ -85,7 +95,9 @@ h1 {
     outline: none;
     border: none;
     background-color: transparent;
-    color: var(--text-color);
+    color: black;
+    background-color: #FFCA1C;
+    border: 4px solid black;
     font-family: var(--font-family);
     font-size: 2rem;
     text-transform: uppercase;
