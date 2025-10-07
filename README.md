@@ -8,6 +8,7 @@
 ---
 
 ## ✨ Objectifs
+
 - Comprendre le rôle du **Modèle**, de la **Vue** et du **Contrôleur**  
 - Découvrir les échanges entre les trois parties dans une architecture MVC  
 - Identifier et corriger les erreurs fréquentes  
@@ -16,6 +17,7 @@
 ---
 
 ## 📚 Chapitres inclus
+
 1. **Introduction au MVC** – Mise en contexte et principes généraux  
 2. **Le Modèle** – Données et logique métier  
 3. **La Vue** – Présentation et affichage  
@@ -26,7 +28,7 @@
 
 ---
 
-## Modules Cours:
+## Modules Cours
 
 1. Module 1 – Rôles du MVC : Comprendre les responsabilités du Modèle, Vue et Contrôleur.
 2. Module 2 – Flux d’une requête : Suivre le parcours d’une requête utilisateur à travers MVC.
@@ -35,7 +37,7 @@
 5. Module 5 – Rôle de la Vue : Afficher les données du Modèle sans les modifier.
 6. Module 6 – Flux complet : Combiner Modèle, Vue et Contrôleur pour gérer une requête entière.
 
-## Modules Jeux:
+## Modules Jeux
 
 1. Module 1 – Rôles du MVC : Drag & drop / tri de cartes – placer les actions dans Modèle, Vue ou Contrôleur.
 2. Module 2 – Flux d’une requête : Diagramme interactif – ordonner Routeur → Contrôleur → Modèle → Vue.
@@ -47,6 +49,7 @@
 ---
 
 ## 🎮 Jeux & Activités
+
 - **Quiz Vrai/Faux** – Pour tester tes connaissances  
 - **Scénarios interactifs** – Choisir la bonne action pour avancer  
 - **Corrections de bugs** – Identifier les erreurs dans des exemples  
@@ -57,6 +60,7 @@
 ## 🚀 Installation & Lancement
 
 1. Clone ou télécharge le dépôt :
+
    ```bash
    git clone https://github.com/ton-profil/aventure-mvc.git
    cd aventure-mvc
@@ -72,8 +76,8 @@
 
 ## 🎨 Particularités
 
-* Interface pensée comme une **aventure pédagogique**
-* **Mascotte insecte 🐞** en clin d’œil aux “bugs”
+- Interface pensée comme une **aventure pédagogique**
+- **Mascotte insecte 🐞** en clin d’œil aux “bugs”
 
 ---
 
