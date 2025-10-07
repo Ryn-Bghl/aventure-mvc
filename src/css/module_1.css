@@ -34,7 +34,7 @@ a {
 body {
     background: url("/src/images/background1.png");
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: cover;
     color: var(--text-color);
     font-family: var(--font-family);
 }

@@ -36,7 +36,7 @@ p{
 body {
     background-image: url("images/background3.png"  )  ;/* besoin d'aide la dessus l'image ne prends pas toute la place ou deviens coupé en étant trop grosse*/
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: cover;
     
     color: var(--text-color);
     font-family: var(--font-family);
