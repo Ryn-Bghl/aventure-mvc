@@ -39,14 +39,29 @@ body {
     font-family: var(--font-family);
 }
 p{
-    color: black;
-    background-color: #FFCA1C;
     padding-left: 10px;
     margin-left: 30px;
     margin-right: 30px;
     text-align: center;
-    border: 10px solid black;
     border-radius: 10px;
+    padding: 65px;
+    gap: 5px;
+}
+ul{
+text-align: center;
+text-decoration: none;
+}
+
+li{
+    margin: 5px;
+    padding: 5px;
+list-style-type: none;
+}
+
+strong{
+    font-size: 1.1rem;
+    color: blue;
+    -webkit-text-stroke: 0.1px black; 
 }
 
 header h1 {
@@ -85,6 +100,16 @@ header h1 {
 
 .navigation a:hover {
     animation: press-blink 1s steps(1) infinite;
+}
+
+.coursM {
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        color: black;
+    background-color: #FFCA1C;
+        border: 10px solid black;
 }
 
 @keyframes press-blink {
