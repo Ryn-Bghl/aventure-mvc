@@ -110,6 +110,9 @@ h1 {
 .pixelarticons--chevron-right {
     height: 50px !important;
     width: 50px !important;
+    -webkit-text-stroke: 0.1
+    5px black; 
+
 }
 
 @keyframes press-blink {
