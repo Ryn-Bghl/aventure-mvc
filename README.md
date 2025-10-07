@@ -7,7 +7,7 @@
 
 ---
 
-## ✨ Objectif
+## ✨ Objectifs
 - Comprendre le rôle du **Modèle**, de la **Vue** et du **Contrôleur**  
 - Découvrir les échanges entre les trois parties dans une architecture MVC  
 - Identifier et corriger les erreurs fréquentes  
