@@ -26,6 +26,26 @@
 
 ---
 
+## Modules Cours:
+
+1. Module 1 – Rôles du MVC : Comprendre les responsabilités du Modèle, Vue et Contrôleur.
+2. Module 2 – Flux d’une requête : Suivre le parcours d’une requête utilisateur à travers MVC.
+3. Module 3 – Rôle du Contrôleur : Gérer les actions utilisateur et coordonner Modèle et Vue.
+4. Module 4 – Rôle du Modèle : Manipuler les données et la logique métier sans afficher de contenu.
+5. Module 5 – Rôle de la Vue : Afficher les données du Modèle sans les modifier.
+6. Module 6 – Flux complet : Combiner Modèle, Vue et Contrôleur pour gérer une requête entière.
+
+## Modules Jeux:
+
+1. Module 1 – Rôles du MVC : Drag & drop / tri de cartes – placer les actions dans Modèle, Vue ou Contrôleur.
+2. Module 2 – Flux d’une requête : Diagramme interactif – ordonner Routeur → Contrôleur → Modèle → Vue.
+3. Module 3 – Rôle du Contrôleur : Simulation cliquable – cliquer dans le bon ordre sur les actions du Contrôleur.
+4. Module 4 – Rôle du Modèle : Drag & drop de données – associer les données aux bonnes actions du Modèle.
+5. Module 5 – Rôle de la Vue : Association template → données – relier les blocs de données aux templates corrects.
+6. Module 6 – Flux complet : Aventure interactive / décisions – prendre les bonnes décisions successives pour compléter le flux.
+
+---
+
 ## 🎮 Jeux & Activités
 - **Quiz Vrai/Faux** – Pour tester tes connaissances  
 - **Scénarios interactifs** – Choisir la bonne action pour avancer  
