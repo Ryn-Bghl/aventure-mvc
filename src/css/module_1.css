@@ -96,10 +96,14 @@ header h1 {
     align-items: center;
     text-decoration: none;
     color: var(--text-color);
+    background-color: black;
+    border-radius: 4px;
+    padding: 0.5%;
+
 }
 
 .navigation a:hover {
-    animation: press-blink 1s steps(1) infinite;
+        animation: scale-anim 1.4s infinite;
 }
 
 .coursM {
@@ -112,6 +116,21 @@ header h1 {
         border: 10px solid black;
 }
 
+@keyframes scale-anim {
+    0% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+
+}
+/*
 @keyframes press-blink {
     0% {
         opacity: 0;
@@ -125,3 +144,4 @@ header h1 {
         opacity: 0;
     }
 }
+*/
