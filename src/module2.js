@@ -4,13 +4,13 @@ function dragstartHandler(ev) {
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
   ev.dataTransfer.setData(
     "text/uri-list",
-    ev.target.ownerDocument.location.href,
+    ev.target.ownerDocument.location.href
   );
 }
 
 const paragraphs = document.querySelectorAll(".pdrag");
 
-paragraphs.forEach(p => {
+paragraphs.forEach((p) => {
   p.addEventListener("dragstart", dragstartHandler);
 });
 
@@ -18,7 +18,7 @@ paragraphs.forEach(p => {
 const targets = document.querySelectorAll(".target");
 
 // 2. Loop through each target and add the necessary event listeners
-targets.forEach(target => {
+targets.forEach((target) => {
   // Cancel dragover so that drop can fire
   target.addEventListener("dragover", (ev) => {
     ev.preventDefault();
