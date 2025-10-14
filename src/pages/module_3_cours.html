@@ -20,13 +20,30 @@
     <h1><span class="pixelarticons--book-open"></span>Chapitre 3 – Cours : Le rôle du Controller</h1>
   </header>
 
-<main>
+  <main>
     <section class="coursM">
       <ul>
-            </ul>
+        <li>
+            <h2>Le Réceptionniste de l'Application</h2>
+            <p>Le Contrôleur est le premier point de contact pour une action de l'utilisateur. Il reçoit la requête et sait exactement quoi faire. Par exemple, si un utilisateur clique sur "Sauvegarder", le contrôleur prend cette demande en charge.</p>
+            <img src="../images/controller.png" alt="Controller Icon" class="cours-image">
+        </li>
+        <li>
+            <h2>Le Coordinateur des Tâches</h2>
+            <p>Le Contrôleur ne fait pas le travail lui-même. Il délègue. Il va dire au Modèle : "Prépare-toi à enregistrer ces informations". Ensuite, il dira à la Vue : "Affiche un message de succès à l'utilisateur".</p>
+        </li>
+        <li>
+            <h2>Gestion des Entrées Utilisateur</h2>
+            <p>Le Contrôleur est spécialisé dans la gestion des entrées. Il récupère les données d'un formulaire, interprète les clics sur les liens et les boutons, et traduit ces actions en commandes pour le reste de l'application.</p>
+        </li>
+        <li>
+            <h2>Le Cerveau Logique (sans les données)</h2>
+            <p>Il contient la logique de l'application : que faire quand l'utilisateur fait X ou Y ? Mais il ne contient ni la logique métier (comment les données sont structurées/manipulées, ça c'est le Modèle) ni la logique de présentation (comment ça s'affiche, ça c'est la Vue).</p>
+        </li>
+      </ul>
     </section>
 
- <nav class="navigation">
+    <nav class="navigation">
       <a href="module2-exercice.html"><span class="pixelarticons--arrow-left"></span> Retour à l'exercice Module 2</a>
       <a href="module3-exercice.html">Aller à l'exercice Module 3 <span class="pixelarticons--arrow-right"></span></a>
     </nav>
