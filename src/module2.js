@@ -8,7 +8,7 @@ function dragstartHandler(ev) {
   );
 }
 
-const p = document.getElementById("pdrag");
+const p = document.querySelector(".pdrag");
 p.addEventListener("dragstart", dragstartHandler);
 const target = document.getElementById("target");
 
