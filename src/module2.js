@@ -4,28 +4,29 @@ function dragstartHandler(ev) {
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
   ev.dataTransfer.setData(
     "text/uri-list",
-    ev.target.ownerDocument.location.href,
+    ev.target.ownerDocument.location.href
   );
 }
 
-// 1. Use querySelectorAll to get a list of ALL matching elements
 const paragraphs = document.querySelectorAll(".pdrag");
 
-// 2. Loop through the list and add the event listener to EACH element
-paragraphs.forEach(p => {
+paragraphs.forEach((p) => {
   p.addEventListener("dragstart", dragstartHandler);
 });
 
+// 1. Select all elements with the "target" class
+const targets = document.querySelectorAll(".target");
 
-const target = document.getElementById("target");
+// 2. Loop through each target and add the necessary event listeners
+targets.forEach((target) => {
+  // Cancel dragover so that drop can fire
+  target.addEventListener("dragover", (ev) => {
+    ev.preventDefault();
+  });
 
-// Cancel dragover so that drop can fire
-target.addEventListener("dragover", (ev) => {
-  ev.preventDefault();
-});
-
-target.addEventListener("drop", (ev) => {
-  ev.preventDefault();
-  const data = ev.dataTransfer.getData("text/plain");
-  ev.target.textContent = data; // Changed to textContent to replace the "a"
+  target.addEventListener("drop", (ev) => {
+    ev.preventDefault();
+    const data = ev.dataTransfer.getData("text/plain");
+    ev.target.textContent = data;
+  });
 });
