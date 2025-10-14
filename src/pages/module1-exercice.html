@@ -1,4 +1,59 @@
-<nav class="navigation">
-  <a href="module_1_cours.html"><span class="pixelarticons--arrow-left"></span> Retour au cours du module 1</a>
-  <a href="module_2_cours.html">Aller au cours du module 2 <span class="pixelarticons--arrow-right"></span></a>
-</nav>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Module 1 — Rôles du MVC</title>
+  <link href="../css/Exo_1.css" rel="stylesheet">
+  <script src="../Exo1.js" defer></script>
+  <link href="../css/exercices.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="card-wrap">
+    <header>
+      <div>
+        <h1>Module 1 — Rôles du MVC</h1>
+        <p class="lead">Tri de cartes : place chaque action dans Modèle / Vue / Contrôleur.</p>
+      </div>
+      <div class="controls">
+        <button id="shuffleBtn">Mélanger</button>
+        <button id="resetBtn" class="ghost">Réinitialiser</button>
+        <button id="checkBtn">Vérifier</button>
+      </div>
+    </header>
+
+    <section class="board">
+      <div class="pile" aria-label="Pioche">
+        <div class="title">Cartes</div>
+        <div id="pieces" class="pieces" role="list"></div>
+      </div>
+
+      <div class="zones" role="list">
+        <div class="zone" data-answer="M" id="zone-modele" aria-label="Zone Modèle" role="listitem">
+          <h2>Modèle</h2>
+        </div>
+        <div class="zone" data-answer="V" id="zone-vue" aria-label="Zone Vue" role="listitem">
+          <h2>Vue</h2>
+        </div>
+        <div class="zone" data-answer="C" id="zone-controleur" aria-label="Zone Contrôleur" role="listitem">
+          <h2>Contrôleur</h2>
+        </div>
+      </div>
+    </section>
+
+    <div class="feedback" id="feedback" aria-live="polite"></div>
+  </div>
+
+
+  <nav class="navigation">
+
+    <a href="module_1_cours.html"><span class="pixelarticons--arrow-left"></span> Retour au cours du module 1</a>
+    <a href="module_2_cours.html">Aller au cours du module 2 <span class="pixelarticons--arrow-right"></span></a>
+  </nav>
+
+</body>
+
+</html>

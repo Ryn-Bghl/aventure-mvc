@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-color: #212121;
     color: #fff;
@@ -155,4 +156,25 @@ h1 {
 .adventure-choices button:hover {
     background-color: #f9a825;
     color: #000;
+=======
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.navigation a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: black;
+    border-radius: 4px;
+    padding: 0.5%;
+
+}
+
+.navigation a:hover {
+    animation: scale-anim 1.4s infinite;
+>>>>>>> 3ed7f0e2d1d2a46d37390040c674834cc05df415
 }
