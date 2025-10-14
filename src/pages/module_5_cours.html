@@ -2,6 +2,48 @@
 <html lang="fr">
 
 <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MVC Adventure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="../css/module_1.css" rel="stylesheet">
+
+    <link href="../css/module_2.css" rel="stylesheet">
+    <link href="../css/icons.css" rel="stylesheet">
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1><span class="pixelarticons--book-open"></span>Chap6 Le rôle de la vue </h1>
+    </header>
+
+    <main>
+        <section class="coursM">
+            <h2>Flux d'une requête — l'essentiel</h2>
+            <p class="intro">Un utilisateur initie une requête (clic, formulaire, AJAX). Le <strong>Controller</strong>
+                traite et valide, le <strong>Model</strong> gère les données, la <strong>View</strong> présente la
+                réponse (HTML/JSON).</p>
+
+            <ul class="essentiel">
+                <li><strong>Initiation</strong> : navigateur → requête HTTP (méthode, URL).</li>
+                <li><strong>Traitement</strong> : Controller (validation, authentification).</li>
+                <li><strong>Données</strong> : Model (lecture/écriture, logique métier).</li>
+                <li><strong>Rendu</strong> : View → réponse HTTP (code + contenu).</li>
+            </ul>
+
+            <p class="exemple"><em>Exemple</em> : Blog — Model = base d'articles, Controller = action «Créer», View =
+                page affichant l'article.</p>
+            <p class="memo"><strong>Aide‑mémoire :</strong> Modèle = cerveau, Vue = écran, Contrôleur = chef
+                d'orchestre.</p>
+        </section>
+
+    <nav class="navigation">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MVC Adventure</title>
@@ -14,17 +56,6 @@
 
   <script src="app.js" defer></script>
 </head>
-
-<body>
-  <header>
-    <h1><span class="pixelarticons--book-open"></span>Chapitre 5 – Cours : Le rôle de la Vue</h1>
-  </header>
-
-<main>
-    <section class="coursM">
-      <ul>
-            </ul>
-    </section>
 
  <nav class="navigation">
       <a href="module4-exercice.html"><span class="pixelarticons--arrow-left"></span> Retour à l'exercice Module 4</a>
