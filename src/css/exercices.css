@@ -1,3 +1,17 @@
+:root {
+    --font-family: 'Press Start 2P', cursive;
+    --font-family-2: 'Jersey 10', sans-serif;
+    --bg-color: #222831;
+    --bg-color-alt: #1c1c1c;
+    --text-color: #FFCA1C;
+    --text-color-alt: #393e46;
+    --primary-color: #00adb5;
+    --primary-color-alt: #0096c5;
+    --secondary-color: #393e46;
+    --secondary-color-alt: #515a61;
+    --accent-color: #ff7f00;
+}
+
 body {
     /* background-color: #212121; */
     background-image: url("../images/background3.png");
