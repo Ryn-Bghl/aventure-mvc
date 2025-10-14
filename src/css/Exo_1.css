@@ -1,0 +1,83 @@
+
+		:root{
+			--bg-1:#0f2027;
+			--bg-2:#2c5364;
+			--card:#1e90ff;
+			--correct:#4caf50;
+			--wrong:#f44336;
+			--muted:#eef3f8;
+			--panel:#ffffffcc;
+		}
+		*{box-sizing:border-box}
+		html,body{height:100%;margin:0}
+		body{
+			font-family:Inter, Arial, Helvetica, sans-serif;
+			background:linear-gradient(135deg,var(--bg-1) 0%,var(--bg-2) 100%);
+			color:#102028;
+			display:flex;
+			align-items:flex-start;
+			justify-content:center;
+			padding:28px;
+			-webkit-font-smoothing:antialiased;
+		}
+		.card-wrap{
+			background:var(--panel);
+			border-radius:16px;
+			padding:20px;
+			width:100%;
+			max-width:980px;
+			box-shadow:0 10px 30px rgba(2,6,23,0.3);
+		}
+		header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+		h1{font-size:20px;margin:0;color:#052b3a}
+		p.lead{margin:6px 0 18px;color:#345;opacity:.9}
+
+		.controls{display:flex;gap:10px;align-items:center}
+		.controls button{
+			padding:8px 12px;
+			font-size:14px;
+			border-radius:8px;
+			border:none;
+			cursor:pointer;
+			min-width:86px;
+			max-width:140px;
+			background:#673ab7;color:white
+		}
+		.controls button.ghost{background:#fff;border:1px solid #ddd;color:#333}
+
+		.board{display:flex;gap:18px;align-items:flex-start;margin-top:14px}
+
+		/* zones */
+		.zones{display:flex;flex:1;gap:12px}
+		.zone{
+			background:linear-gradient(180deg,#ffffff, #f7fbff);
+			border-radius:12px;
+			padding:12px;
+			min-width:200px;
+			max-width:320px;
+			border:2px dashed rgba(10,30,60,0.12);
+			display:flex;flex-direction:column;gap:8px;
+			max-height:380px;overflow:auto;position:relative
+		}
+		.zone.active{box-shadow:0 6px 20px rgba(8,30,50,0.12);border-color:#4f5d75}
+		.zone h2{margin:0 0 6px 0;font-size:15px;color:#16323f;background:transparent;position:sticky;top:0;padding-top:4px}
+
+		/* pieces area */
+		.pile{width:260px}
+		.pile .title{font-weight:600;margin-bottom:8px}
+		.pieces{display:flex;flex-direction:column;gap:8px}
+
+		.piece{
+			background:var(--card);
+			color:white;padding:10px;border-radius:8px;cursor:grab;
+			box-shadow:0 4px 14px rgba(2,6,23,0.12);user-select:none;word-break:break-word
+		}
+		.piece[draggable="true"]:active{cursor:grabbing}
+		.piece.correct{background:var(--correct)}
+		.piece.wrong{background:var(--wrong)}
+
+		.feedback{margin-top:10px;font-size:14px;color:#052b3a}
+
+		/* responsive */
+		@media(max-width:900px){.board{flex-direction:column}.pile{width:100%}}
+	
