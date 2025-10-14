@@ -23,7 +23,40 @@
 <main>
     <section class="coursM">
       <ul>
-            </ul>
+        <li>
+            <h2>Étape 1 : L'Action de l'Utilisateur</h2>
+            <p>Tout commence par une action de votre part. Par exemple, vous cliquez sur un lien "Afficher mon profil". Votre navigateur envoie une requête au serveur.</p>
+            <img src="../images/cursor.png" alt="Cursor Icon" class="cours-image">
+        </li>
+        <li>
+            <h2>Étape 2 : Le Contrôleur Prend les Choses en Main</h2>
+            <p>La requête arrive au Contrôleur. C'est le premier à réagir. Il analyse la demande : "L'utilisateur veut voir son profil".</p>
+            <img src="../images/controller.png" alt="Controller Icon" class="cours-image">
+        </li>
+        <li>
+            <h2>Étape 3 : Le Contrôleur Interroge le Modèle</h2>
+            <p>Le Contrôleur demande au Modèle : "J'ai besoin des informations du profil de l'utilisateur X". Il ne sait pas comment les obtenir, il fait juste la demande.</p>
+            <img src="../images/model.png" alt="Model Icon" class="cours-image">
+        </li>
+        <li>
+            <h2>Étape 4 : Le Modèle Récupère les Données</h2>
+            <p>Le Modèle, qui est connecté à la base de données, exécute la requête pour trouver les informations de l'utilisateur X. Une fois trouvées, il les renvoie au Contrôleur.</p>
+        </li>
+        <li>
+            <h2>Étape 5 : Le Contrôleur Prépare la Vue</h2>
+            <p>Avec les données en main, le Contrôleur choisit la Vue appropriée (par exemple, `profil.html`) et lui transmet les informations de l'utilisateur.</p>
+            <img src="../images/vue.png" alt="View Icon" class="cours-image">
+        </li>
+        <li>
+            <h2>Étape 6 : La Vue Construit la Page</h2>
+            <p>La Vue reçoit les données et les insère dans le template HTML. Elle génère la page finale que vous allez voir, avec votre nom, votre email, etc.</p>
+        </li>
+        <li>
+            <h2>Étape 7 : Affichage Final</h2>
+            <p>Le Contrôleur envoie la page HTML générée par la Vue à votre navigateur. Vous voyez enfin votre page de profil s'afficher ! La boucle est bouclée.</p>
+            <img src="../images/website%20preview.png" alt="Website preview" class="cours-image">
+        </li>
+      </ul>
     </section>
 
  <nav class="navigation">
