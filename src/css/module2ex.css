@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url("/src/images/background2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFCA1C;
+    font-family: "Press Start 2P", cursive;
+}
+header h1{
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+}
+p{
+    background-color: #FFCA1C;
+    color: black;
+    border: 10px solid black;
+}
+.target{
+    background-color:black ;
+    color:#FFCA1C ;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.navigation a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFCA1C;
+    background-color: black;
+    border-radius: 4px;
+    padding: 0.5%;
+
+}
+
+ .navigation a:hover {
+    animation: scale-anim 1.4s infinite;
+}
