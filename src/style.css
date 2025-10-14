@@ -118,11 +118,7 @@ h1 {
 
 }
 
-.back {
-    height: 50px !important;
-    width: 50px !important;
-    -webkit-text-stroke: 0.1 5px black;
-}
+
 
 @keyframes scale-anim {
     0% {
