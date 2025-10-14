@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body {
     background-color: #212121;
     color: #fff;
@@ -33,15 +32,15 @@ h1 {
 }
 
 .navigation {
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .navigation a {
-  color: #f9a825;
-  text-decoration: none;
-  font-size: 1rem;
+    color: #f9a825;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 /* Module 3 Styles */
@@ -65,12 +64,14 @@ h1 {
 }
 
 .correct {
-    background-color: #4caf50 !important; /* Green */
+    background-color: #4caf50 !important;
+    /* Green */
     color: #fff !important;
 }
 
 .incorrect {
-    background-color: #f44336 !important; /* Red */
+    background-color: #f44336 !important;
+    /* Red */
     color: #fff !important;
 }
 
@@ -80,14 +81,16 @@ h1 {
     justify-content: space-around;
 }
 
-.data-items, .model-actions {
+.data-items,
+.model-actions {
     width: 45%;
     border: 2px dashed #fff;
     padding: 10px;
     min-height: 200px;
 }
 
-.data-item, .data-block {
+.data-item,
+.data-block {
     padding: 10px;
     margin: 10px 0;
     cursor: move;
@@ -106,7 +109,8 @@ h1 {
     text-align: left;
 }
 
-.model-action, .template-snippet {
+.model-action,
+.template-snippet {
     padding: 20px;
     margin: 10px 0;
     border: 2px solid #fff;
@@ -124,11 +128,13 @@ h1 {
     white-space: pre;
 }
 
-.model-action.over, .template-snippet.over {
+.model-action.over,
+.template-snippet.over {
     background-color: #777;
 }
 
-.model-action.dropped, .template-snippet.dropped {
+.model-action.dropped,
+.template-snippet.dropped {
     background-color: #4caf50;
     border-color: #fff;
 }
@@ -156,25 +162,20 @@ h1 {
 .adventure-choices button:hover {
     background-color: #f9a825;
     color: #000;
-=======
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-}
 
-.navigation a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-color);
-    background-color: black;
-    border-radius: 4px;
-    padding: 0.5%;
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
 
-}
+    .navigation a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--text-color);
+        background-color: black;
+        border-radius: 4px;
+        padding: 0.5%;
 
-.navigation a:hover {
-    animation: scale-anim 1.4s infinite;
->>>>>>> 3ed7f0e2d1d2a46d37390040c674834cc05df415
-}
+    }
