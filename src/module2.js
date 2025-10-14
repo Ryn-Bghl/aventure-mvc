@@ -17,12 +17,12 @@ paragraphs.forEach(p => {
 });
 
 
-const target = document.getElementById("target");
+const target = document.querySelectorAll(".target");
 
-// Cancel dragover so that drop can fire
+paragraphs.forEach(p => {
 target.addEventListener("dragover", (ev) => {
   ev.preventDefault();
-});
+}});
 
 target.addEventListener("drop", (ev) => {
   ev.preventDefault();
