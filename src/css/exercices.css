@@ -1,0 +1,20 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.navigation a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: black;
+    border-radius: 4px;
+    padding: 0.5%;
+
+}
+
+.navigation a:hover {
+    animation: scale-anim 1.4s infinite;
+}
