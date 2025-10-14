@@ -1,10 +1,26 @@
 body {
+<<<<<<< HEAD
     /* background-color: #212121; */
     background-image: url("../images/background1.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+=======
+
+    background-image: url("../images/background3.png");
+    /* besoin d'aide la dessus l'image ne prends pas toute la place ou deviens coupé en étant trop grosse*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -100px;
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+
+
+    background-color: #212121;
+>>>>>>> 58b85bfc28ada66a143538a1a3ba99a5e4fc77a3
     color: #fff;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
@@ -36,6 +52,7 @@ h1 {
     min-height: 30px;
 }
 
+
 .navigation {
     margin-top: 40px;
     display: flex;
@@ -45,7 +62,16 @@ h1 {
 .navigation a {
     color: #f9a825;
     text-decoration: none;
+
+    color: var(--text-color);
+    background-color: black;
+    border-radius: 4px;
+    padding: 0.5%;
+    color: gold;
+
+
     font-size: 1rem;
+
 }
 
 /* Module 3 Styles */
@@ -62,6 +88,22 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
+
+
+@keyframes scale-anim {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+
 
 .action-buttons button:hover {
     background-color: #f9a825;
@@ -184,4 +226,5 @@ h1 {
         padding: 0.5%;
 
     }
+
 }

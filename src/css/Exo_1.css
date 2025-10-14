@@ -21,7 +21,7 @@
 			-webkit-font-smoothing:antialiased;
 		}
 		.card-wrap{
-			background:var(--panel);
+			background:#ffc107f2;
 			border-radius:16px;
 			padding:20px;
 			width:100%;
