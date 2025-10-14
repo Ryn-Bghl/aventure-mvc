@@ -102,7 +102,7 @@ h1 {
     font-family: var(--font-family);
     font-size: 2rem;
     text-transform: uppercase;
-    animation: press-blink 1.4s steps(1) infinite;
+    animation: scale-anim 1.4s infinite;
     text-decoration: none;
     border-radius: 10px;
 }
@@ -115,16 +115,17 @@ h1 {
 
 }
 
-@keyframes press-blink {
+@keyframes scale-anim {
     0% {
-        opacity: 1;
+        transform: scale(1.3);
     }
 
     50% {
-        opacity: 0;
+        transform: scale(1.2);
     }
 
     100% {
-        opacity: 1;
+        transform: scale(1.3);
     }
+    
 }
