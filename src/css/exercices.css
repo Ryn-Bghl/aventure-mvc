@@ -55,6 +55,10 @@ h1 {
     font-size: 1rem;
 }
 
+.navigation a:hover {
+    animation: scale-anim 1.4s infinite;
+}
+
 /* Module 3 Styles */
 .action-buttons button {
     display: block;
