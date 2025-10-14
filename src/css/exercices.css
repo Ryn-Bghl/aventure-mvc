@@ -1,5 +1,4 @@
 body {
-
     background-image: url("../images/background3.png");
     /* besoin d'aide la dessus l'image ne prends pas toute la place ou deviens coupé en étant trop grosse*/
     background-repeat: no-repeat;
@@ -7,10 +6,6 @@ body {
     background-position-y: -100px;
     color: var(--text-color);
     font-family: var(--font-family);
-}
-
-
-
     background-color: #212121;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
@@ -43,7 +38,6 @@ h1 {
     min-height: 30px;
 }
 
-
 .navigation {
     margin-top: 40px;
     display: flex;
@@ -53,16 +47,12 @@ h1 {
 .navigation a {
     color: #f9a825;
     text-decoration: none;
-
     color: var(--text-color);
     background-color: black;
     border-radius: 4px;
     padding: 0.5%;
     color: gold;
-
-
     font-size: 1rem;
-
 }
 
 /* Module 3 Styles */
@@ -81,7 +71,6 @@ h1 {
 }
 
 
-
 @keyframes scale-anim {
     0% {
         transform: scale(0.8);
@@ -94,7 +83,7 @@ h1 {
     100% {
         transform: scale(0.8);
     }
-
+}
 
 .action-buttons button:hover {
     background-color: #f9a825;
@@ -217,5 +206,4 @@ h1 {
         padding: 0.5%;
 
     }
-
 }
