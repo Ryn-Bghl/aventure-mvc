@@ -1,7 +1,7 @@
 :root {
 	--bg-1: #0f2027;
 	--bg-2: #2c5364;
-	--card: #1e90ff;
+	--card: #ffeb13;
 	--correct: #4caf50;
 	--wrong: #f44336;
 	--muted: #eef3f8;
@@ -19,22 +19,13 @@ body {
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	font-family: 'Press Start 2P', cursive;
+	font-family: Inter, Arial, Helvetica, sans-serif;
 	color: #102028;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
 	padding: 28px;
-}
-
-.navigation {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	max-width: 980px;
+	-webkit-font-smoothing: antialiased;
 }
 
 .card-wrap {
@@ -56,6 +47,7 @@ header {
 h1 {
 	font-size: 20px;
 	margin: 0;
+	color: #052b3a
 }
 
 p.lead {
@@ -150,11 +142,11 @@ p.lead {
 
 .piece {
 	background: var(--card);
-	color: white;
+	color: rgb(0, 0, 0);
 	padding: 10px;
 	border-radius: 8px;
 	cursor: grab;
-	box-shadow: 0 4px 14px rgba(2, 6, 23, 0.12);
+	box-shadow: 0 4px 14px rgba(2, 6, 23, 0.444);
 	user-select: none;
 	word-break: break-word;
 	transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
