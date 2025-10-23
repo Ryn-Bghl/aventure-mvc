@@ -8,8 +8,14 @@ body {
     background: url("/src/images/background2.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     color: #FFCA1C;
     font-family: "Press Start 2P", cursive;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 header h1 {
@@ -49,6 +55,7 @@ ul {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    width: 100%;
 }
 
 .navigation a {

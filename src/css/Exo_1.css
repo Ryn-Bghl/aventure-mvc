@@ -16,6 +16,10 @@ html,
 body {
     height: 100%;
     margin: 0;
+    background-image: url("../images/background3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 body {
@@ -34,7 +38,7 @@ body {
 	padding: 20px;
 	width: 100%;
 	max-width: 980px;
-	box-shadow: 0 10px 30px rgba(2, 6, 23, 0.3);
+	box-shadow: 0 10px 30px rgba(2, 6, 23, 0.3), 0 0 0 10px #ffc107, 0 0 0 20px black;
 }
 
 header {
@@ -72,6 +76,7 @@ p.lead {
     max-width: 140px;
     background: #673ab7;
     color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .controls button.ghost {

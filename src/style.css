@@ -37,12 +37,16 @@ p {
 
 body {
     background-image: url("images/background3.png");
-    /* besoin d'aide la dessus l'image ne prends pas toute la place ou deviens coupé en étant trop grosse*/
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -100px;
+    background-position: center;
     color: var(--text-color);
     font-family: var(--font-family);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #hercule-popup {

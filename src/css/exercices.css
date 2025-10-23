@@ -1,229 +1,233 @@
 body {
     background-image: url("../images/background3.png");
-    /* besoin d'aide la dessus l'image ne prends pas toute la place ou deviens coupé en étant trop grosse*/
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -100px;
+    background-position: center;
     color: var(--text-color);
     font-family: var(--font-family);
-    background-color: #212121;
-    color: #fff;
-    font-family: 'Press Start 2P', cursive;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+}
 
-    :root {
-        --font-family: 'Press Start 2P', cursive;
-        --font-family-2: 'Jersey 10', sans-serif;
-        --bg-color: #222831;
-        --bg-color-alt: #1c1c1c;
-        --text-color: #FFCA1C;
-        --text-color-alt: #393e46;
-        --primary-color: #00adb5;
-        --primary-color-alt: #0096c5;
-        --secondary-color: #393e46;
-        --secondary-color-alt: #515a61;
-        --accent-color: #ff7f00;
+:root {
+    --font-family: 'Press Start 2P', cursive;
+    --font-family-2: 'Jersey 10', sans-serif;
+    --bg-color: #222831;
+    --bg-color-alt: #1c1c1c;
+    --text-color: #FFCA1C;
+    --text-color-alt: #393e46;
+    --primary-color: #00adb5;
+    --primary-color-alt: #0096c5;
+    --secondary-color: #393e46;
+    --secondary-color-alt: #515a61;
+    --accent-color: #ff7f00;
+}
+
+
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Jersey 10', sans-serif;
+    font-size: 3rem;
+    color: #f9a825;
+    text-shadow: 2px 2px #000;
+}
+
+.game-container {
+    border: 4px solid #fff;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #333;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    min-height: 30px;
+}
+
+.navigation {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.navigation a {
+    color: #f9a825;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: black;
+    border-radius: 4px;
+    padding: 0.5%;
+    color: gold;
+    font-size: 1rem;
+}
+
+.navigation a:hover {
+    animation: scale-anim 1.4s infinite;
+}
+
+/* Module 3 Styles */
+.action-buttons button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    background-color: #555;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+@keyframes scale-anim {
+    0% {
+        transform: scale(0.8);
     }
 
-
-
-    main {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
+    50% {
+        transform: scale(0.9);
     }
 
-    h1 {
-        font-family: 'Jersey 10', sans-serif;
-        font-size: 3rem;
-        color: #f9a825;
-        text-shadow: 2px 2px #000;
+    100% {
+        transform: scale(0.8);
     }
+}
 
-    .game-container {
-        border: 4px solid #fff;
-        padding: 20px;
-        margin-top: 20px;
-        background-color: #333;
-    }
+.action-buttons button:hover {
+    background-color: #f9a825;
+    color: #000;
+}
 
-    .feedback {
-        margin-top: 20px;
-        font-size: 1.2rem;
-        min-height: 30px;
-    }
+.correct {
+    background-color: #4caf50 !important;
+    /* Green */
+    color: #fff !important;
+}
+
+.incorrect {
+    background-color: #f44336 !important;
+    /* Red */
+    color: #fff !important;
+}
+
+/* Module 4 & 5 Styles */
+.dnd-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.data-items,
+.model-actions {
+    width: 45%;
+    border: 2px dashed #fff;
+    padding: 10px;
+    min-height: 200px;
+}
+
+.data-item,
+.data-block {
+    padding: 10px;
+    margin: 10px 0;
+    cursor: move;
+    border: 2px solid #000;
+}
+
+.data-item {
+    background-color: #f9a825;
+    color: #000;
+}
+
+.data-block {
+    background-color: #2196F3;
+    color: #fff;
+    font-family: monospace;
+    text-align: left;
+}
+
+.model-action,
+.template-snippet {
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid #fff;
+    transition: background-color 0.3s;
+}
+
+.model-action {
+    background-color: #555;
+}
+
+.template-snippet {
+    background-color: #2d2d2d;
+    font-family: monospace;
+    text-align: left;
+    white-space: pre;
+}
+
+.model-action.over,
+.template-snippet.over {
+    background-color: #777;
+}
+
+.model-action.dropped,
+.template-snippet.dropped {
+    background-color: #4caf50;
+    border-color: #fff;
+}
+
+/* Module 6 Styles */
+.adventure-question {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.adventure-choices button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    background-color: #555;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+    text-align: left;
+}
+
+.adventure-choices button:hover {
+    background-color: #f9a825;
+    color: #000;
 
     .navigation {
-        margin-top: 40px;
         display: flex;
         justify-content: space-between;
+        padding: 1rem;
     }
 
     .navigation a {
-        color: #f9a825;
+        display: flex;
+        align-items: center;
         text-decoration: none;
         color: var(--text-color);
         background-color: black;
         border-radius: 4px;
         padding: 0.5%;
-        color: gold;
-        font-size: 1rem;
+
     }
-
-    .navigation a:hover {
-        animation: scale-anim 1.4s infinite;
-    }
-
-    /* Module 3 Styles */
-    .action-buttons button {
-        display: block;
-        width: 80%;
-        margin: 10px auto;
-        padding: 15px;
-        font-family: 'Press Start 2P', cursive;
-        font-size: 1rem;
-        background-color: #555;
-        color: #fff;
-        border: 2px solid #fff;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-
-    @keyframes scale-anim {
-        0% {
-            transform: scale(0.8);
-        }
-
-        50% {
-            transform: scale(0.9);
-        }
-
-        100% {
-            transform: scale(0.8);
-        }
-    }
-
-    .action-buttons button:hover {
-        background-color: #f9a825;
-        color: #000;
-    }
-
-    .correct {
-        background-color: #4caf50 !important;
-        /* Green */
-        color: #fff !important;
-    }
-
-    .incorrect {
-        background-color: #f44336 !important;
-        /* Red */
-        color: #fff !important;
-    }
-
-    /* Module 4 & 5 Styles */
-    .dnd-container {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .data-items,
-    .model-actions {
-        width: 45%;
-        border: 2px dashed #fff;
-        padding: 10px;
-        min-height: 200px;
-    }
-
-    .data-item,
-    .data-block {
-        padding: 10px;
-        margin: 10px 0;
-        cursor: move;
-        border: 2px solid #000;
-    }
-
-    .data-item {
-        background-color: #f9a825;
-        color: #000;
-    }
-
-    .data-block {
-        background-color: #2196F3;
-        color: #fff;
-        font-family: monospace;
-        text-align: left;
-    }
-
-    .model-action,
-    .template-snippet {
-        padding: 20px;
-        margin: 10px 0;
-        border: 2px solid #fff;
-        transition: background-color 0.3s;
-    }
-
-    .model-action {
-        background-color: #555;
-    }
-
-    .template-snippet {
-        background-color: #2d2d2d;
-        font-family: monospace;
-        text-align: left;
-        white-space: pre;
-    }
-
-    .model-action.over,
-    .template-snippet.over {
-        background-color: #777;
-    }
-
-    .model-action.dropped,
-    .template-snippet.dropped {
-        background-color: #4caf50;
-        border-color: #fff;
-    }
-
-    /* Module 6 Styles */
-    .adventure-question {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-    }
-
-    .adventure-choices button {
-        display: block;
-        width: 80%;
-        margin: 10px auto;
-        padding: 15px;
-        font-family: 'Press Start 2P', cursive;
-        font-size: 1rem;
-        background-color: #555;
-        color: #fff;
-        border: 2px solid #fff;
-        cursor: pointer;
-        text-align: left;
-    }
-
-    .adventure-choices button:hover {
-        background-color: #f9a825;
-        color: #000;
-
-        .navigation {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem;
-        }
-
-        .navigation a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--text-color);
-            background-color: black;
-            border-radius: 4px;
-            padding: 0.5%;
-
-        }
-    }
+}
 }

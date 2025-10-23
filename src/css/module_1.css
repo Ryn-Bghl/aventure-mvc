@@ -35,8 +35,14 @@ body {
     background: url("/src/images/background1.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     color: var(--text-color);
     font-family: var(--font-family);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 p {
@@ -116,6 +122,27 @@ header h1 {
     color: black;
     background-color: #FFCA1C;
     border: 10px solid black;
+}
+
+.mvc-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.mvc-item {
+    text-align: center;
+}
+
+.mvc-item img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+.aide-memoire {
+    margin-top: 2rem;
+    font-style: italic;
 }
 
 @keyframes scale-anim {
