@@ -66,7 +66,7 @@ function clearZones() {
   zones.forEach((z) => {
     // move any pieces inside zones back to pile
     Array.from(z.querySelectorAll(".piece")).forEach((p) =>
-      piecesContainer.appendChild(p)
+      piecesContainer.appendChild(p),
     );
     z.classList.remove("active");
   });
@@ -106,7 +106,7 @@ zones.forEach((zone) => {
           el.classList.add("wrong");
           // highlight correct zone briefly
           const correctZone = zones.find(
-            (z) => z.dataset.answer === el.dataset.answer
+            (z) => z.dataset.answer === el.dataset.answer,
           );
           if (correctZone) {
             correctZone.classList.add("active");
