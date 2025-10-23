@@ -57,8 +57,8 @@ function shuffleArray(a) {
 function init() {
   cards = initialCards.map((c) => Object.assign({}, c));
   shuffleArray(cards);
-  renderPile(cards);
   clearZones();
+  renderPile(cards);
   feedback("Place les cartes dans la bonne zone puis clique sur Vérifier.");
 }
 
@@ -166,6 +166,7 @@ function createConfetti(container) {
 
 // controls
 document.getElementById("shuffleBtn").addEventListener("click", () => {
+  clearZones();
   shuffleArray(cards);
   renderPile(cards);
   feedback("Cartes mélangées.");
