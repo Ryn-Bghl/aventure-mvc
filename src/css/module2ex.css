@@ -17,9 +17,11 @@ body {
     align-items: center;
     justify-content: center;
 }
-header{
+
+header {
     padding: 3rem;
 }
+
 header h1 {
     padding: 0.5rem 1rem;
     display: flex;
@@ -28,9 +30,11 @@ header h1 {
     text-align: center;
     text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
 }
-h2{
+
+h2 {
     padding: 3rem;
 }
+
 p {
     margin: 3rem;
     background-color: #FFCA1C;
@@ -55,10 +59,12 @@ ul {
     justify-content: space-around;
     list-style-type: none;
 }
-ul li{
-    padding: 2rem;
+
+ul li {
+    margin: 2rem;
     border: black 1px solid;
 }
+
 .navigation {
     display: flex;
     justify-content: space-between;
