@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="../css/icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/exercices.css">
+    <link rel="stylesheet" href="../css/module5ex.css">
     <script src="../js/module5.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1><span class="pixelarticons--image"></span> Exercice 5 : La Vue et les Templates</h1>
@@ -21,30 +24,40 @@
             <div class="dnd-container">
                 <div class="data-items">
                     <h3>Données du Contrôleur</h3>
-                    <div class="data-block" draggable="true" data-source="user">{ name: 'Lancelot', level: 15 }</div>
-                    <div class="data-block" draggable="true" data-source="products">[{ name: 'Épée' }, { name: 'Bouclier' }]</div>
-                    <div class="data-block" draggable="true" data-source="error">{ message: 'Accès interdit' }</div>
+                    <div class="data-block" draggable="true" data-source="user">$user = ['name' => 'Lancelot', 'level'
+                        => 15];</div>
+                    <div class="data-block" draggable="true" data-source="products">$products = [['name' => 'Épée'],
+                        ['name' => 'Bouclier']];</div>
+                    <div class="data-block" draggable="true" data-source="error">$error = ['message' => 'Accès
+                        interdit'];</div>
                 </div>
                 <div class="model-actions">
                     <h3>Templates de la Vue</h3>
-                    <div class="template-snippet" data-target="products"><ul>
-    {% for item in products %}
-    <li>{{ item.name }}</li>
-    {% endfor %}
-</ul></div>
-                    <div class="template-snippet" data-target="error"><div class="error">
-    {{ error.message }}
-</div></div>
-                    <div class="template-snippet" data-target="user"><h1>Profil de {{ user.name }}</h1>
-<p>Niveau : {{ user.level }}</p></div>
+                    <div class="template-snippet" data-target="products">
+                        &lt;ul&gt;
+                        &lt;?php foreach ($products as $item): ?&gt;
+                        &lt;li&gt;&lt;?php echo htmlspecialchars($item['name']); ?&gt;&lt;/li&gt;
+                        &lt;?php endforeach; ?&gt;
+                        &lt;/ul&gt;
+                    </div>
+                    <div class="template-snippet" data-target="error">
+                        &lt;div class="error"&gt;
+                        &lt;?php echo htmlspecialchars($error['message']); ?&gt;
+                        &lt;/div&gt;
+                    </div>
+                    <div class="template-snippet" data-target="user">
+                        &lt;h1&gt;Profil de &lt;?php echo
+                        htmlspecialchars($user['name']); ?&gt;&lt;/h1&gt;
+                        &lt;p&gt;Niveau : &lt;?php echo htmlspecialchars($user['level']); ?&gt;&lt;/p&gt;</div>
                 </div>
             </div>
             <div class="feedback" id="feedback-message"></div>
         </div>
     </main>
     <nav class="navigation">
-        <a href="module4-exercice.html"><span class="pixelarticons--arrow-left"></span> Retour à l'exercice 4</a>
+        <a href="module_5_cours.html"><span class="pixelarticons--arrow-left"></span> Retour au cours 5</a>
         <a href="module_6_cours.html">Aller au cours 6 <span class="pixelarticons--arrow-right"></span></a>
     </nav>
 </body>
+
 </html>

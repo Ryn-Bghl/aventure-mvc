@@ -1,0 +1,7 @@
+main {
+    max-width: none;
+}
+
+.game-container * {
+    width: fit-content;
+}
