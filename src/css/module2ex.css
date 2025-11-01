@@ -17,72 +17,374 @@ body {
     align-items: center;
     justify-content: center;
 }
+ /* CSS RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-header {
-    padding: 3rem;
-}
+    /* CSS ENV VARIABLES */
+    :root {
+      --font-family: "Press Start 2P", cursive;
+      --font-family-2: "Jersey 10", sans-serif;
+      --bg-color: #222831;
+      --bg-color-alt: #1c1c1c;
+      --text-color: #FFCA1C;
+      --text-color-alt: #393e46;
+      --primary-color: #00adb5;
+      --primary-color-alt: #0096c5;
+      --secondary-color: #393e46;
+      --secondary-color-alt: #515a61;
+      --accent-color: #ff7f00;
+      --accent-color-alt: #ffc107;
+    }
 
-header h1 {
-    padding: 0.5rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    text-align: center;
-    text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
-}
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-family);
+      min-height: 100vh;
+      padding: 20px;
+      line-height: 1.8;
+    }
 
-h2 {
-    padding: 3rem;
-}
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: var(--bg-color-alt);
+      border: 5px solid var(--primary-color);
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
 
-p {
-    margin: 3rem;
-    background-color: #FFCA1C;
-    color: black;
-    border: 10px solid black;
-}
+    header h1 {
+      font-size: clamp(14px, 4vw, 20px);
+      line-height: 1.6;
+      text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+      color: var(--text-color);
+    }
 
-.target {
-    user-select: none;
-    background-color: black;
-    color: #FFCA1C;
-}
+    h2 {
+      font-size: clamp(10px, 2.5vw, 14px);
+      line-height: 2;
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+      color: var(--accent-color-alt);
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    }
 
-.pdrag {
-    user-select: none;
-    background-color: black;
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style-type: none;
-}
+    .progress {
+      background-color: var(--bg-color-alt);
+      border: 3px solid var(--primary-color);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
 
-ul li {
-    margin: 2rem;
-    border: black 1px solid;
-}
+    .progress-text {
+      font-size: clamp(10px, 2vw, 14px);
+      color: var(--text-color);
+      margin-bottom: 1rem;
+    }
 
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    width: 100%;
-}
+    .progress-bar {
+      background-color: var(--secondary-color);
+      height: 30px;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 2px solid black;
+    }
 
-.navigation a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #FFCA1C;
-    background-color: black;
-    border-radius: 4px;
-    padding: 0.5%;
+    .progress-fill {
+      background-color: var(--primary-color);
+      height: 100%;
+      width: 0%;
+      transition: width 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(8px, 1.5vw, 12px);
+      font-weight: bold;
+      color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
 
-}
+    .drag-zone {
+      background-color: var(--bg-color-alt);
+      border: 5px solid var(--accent-color);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
 
-.navigation a:hover {
-    animation: scale-anim 1.4s infinite;
-}
+    .drag-zone h3 {
+      font-size: clamp(10px, 2vw, 14px);
+      margin-bottom: 1.5rem;
+      color: var(--accent-color-alt);
+      text-align: center;
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    }
+
+    .drag-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      list-style: none;
+    }
+
+    .pdrag {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 5px;
+      cursor: move;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      font-size: clamp(9px, 1.8vw, 12px);
+      border: 3px solid var(--primary-color-alt);
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .pdrag:hover {
+      transform: translateY(-5px) scale(1.05);
+      background-color: var(--primary-color-alt);
+      animation: scale-anim 1.4s infinite;
+    }
+
+    .pdrag.dragging {
+      opacity: 0.5;
+      transform: scale(0.9);
+    }
+
+    .pdrag.used {
+      opacity: 0.3;
+      cursor: not-allowed;
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color-alt);
+    }
+
+    .drop-zone {
+      background-color: var(--text-color);
+      border: 10px solid black;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .flux-text {
+      font-size: clamp(10px, 2vw, 13px);
+      line-height: 2.5;
+      text-align: center;
+      color: black;
+    }
+
+    .flux-text p {
+      margin-bottom: 1rem;
+      padding: 0;
+    }
+
+    .target {
+      display: inline-block;
+      min-width: 180px;
+      padding: 12px 20px;
+      background-color: white;
+      border: 3px dashed var(--secondary-color);
+      border-radius: 5px;
+      margin: 0 5px;
+      transition: all 0.3s ease;
+      vertical-align: middle;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    .target:empty::before {
+      content: "Déposer ici";
+      color: var(--text-color-alt);
+      font-size: 0.85em;
+    }
+
+    .target.drag-over {
+      background-color: var(--accent-color-alt);
+      border-color: var(--accent-color);
+      border-style: solid;
+      transform: scale(1.08);
+      color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .target.filled {
+      background-color: var(--primary-color);
+      border-style: solid;
+      border-color: var(--primary-color-alt);
+      color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .target.correct {
+      background-color: #4CAF50;
+      border-color: #2E7D32;
+      animation: pulse 0.5s ease;
+    }
+
+    .target.incorrect {
+      background-color: #f44336;
+      border-color: #c62828;
+      animation: shake 0.5s ease;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+
+    @keyframes scale-anim {
+      0% { transform: scale(1) translateY(-5px); }
+      50% { transform: scale(0.95) translateY(-5px); }
+      100% { transform: scale(1) translateY(-5px); }
+    }
+
+    .controls {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: 3px solid black;
+      padding: 15px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: var(--font-family);
+      font-size: clamp(8px, 1.5vw, 11px);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .btn:hover {
+      transform: scale(0.95);
+      animation: scale-anim 1.4s infinite;
+    }
+
+    .btn:active {
+      transform: scale(0.9);
+    }
+
+    .btn-validate {
+      background-color: var(--accent-color);
+    }
+
+    .btn-reset {
+      background-color: var(--accent-color-alt);
+      color: black;
+    }
+
+    .feedback {
+      background-color: var(--bg-color-alt);
+      border: 3px solid var(--text-color);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: clamp(10px, 2vw, 12px);
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.8;
+    }
+
+    .feedback.success {
+      background-color: #2E7D32;
+      border-color: #4CAF50;
+      color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .feedback.error {
+      background-color: #c62828;
+      border-color: #f44336;
+      color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .feedback.hidden {
+      display: none;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+
+    .navigation a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: black;
+      color: var(--text-color);
+      text-decoration: none;
+      padding: 15px 25px;
+      border-radius: 4px;
+      font-size: clamp(8px, 1.5vw, 11px);
+      transition: all 0.3s ease;
+      border: 3px solid var(--primary-color);
+      flex: 1;
+      text-align: center;
+      min-width: 200px;
+      justify-content: center;
+    }
+
+    .navigation a:hover {
+      animation: scale-anim 1.4s infinite;
+      background-color: var(--bg-color-alt);
+    }
+
+    .arrow {
+      font-size: 1.5em;
+    }
+
+    @media (max-width: 768px) {
+      .target {
+        min-width: 140px;
+        display: block;
+        margin: 10px auto;
+      }
+      
+      .flux-text {
+        text-align: left;
+      }
+
+      .navigation {
+        flex-direction: column;
+      }
+
+      .navigation a {
+        width: 100%;
+      }
+    }

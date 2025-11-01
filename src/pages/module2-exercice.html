@@ -13,33 +13,64 @@
   <link rel="stylesheet" href="../css/module2ex.css">
   <script src="../js/module2.js" defer></script>
 </head>
-<header>
-  <h1>Exercice 2 Flux d'une requête </h1>
-</header>
-
 <body>
-  <h2>Choisit ce qui coresspond a ce que tu sais du flux d'une requête ! </h2>
-  <ul>
-    <li class="pdrag" draggable="true">Le controller</li>
-    <li class="pdrag" draggable="true">Le modèle</li>
-    <li class="pdrag" draggable="true">La Vue</li>
-    <li class="pdrag" draggable="true">Le routeur</li>
-  </ul>
-  <p>Le flux d'une requête a lieu de cette manière dans un premier temps l'information ce propage via
-    <span class="target">votre réponse</span>
-    <span>ces informations sont ensuite transmise vers </span>
-    <span class="target">votre réponse</span>
-    <span>qui après avoir validé ces données les enverra vers </span>
-    <span class="target">votre réponse</span>
-    <span>qui après avoir vu lu et ces données pemettera a </span>
-    <span class="target">votre réponse</span>
-    <span>de les présenter au public</span>
-  </p>
-  <nav class="navigation">
-    <a href="module_2_cours.html"><span class="pixelarticons--arrow-left"></span> Retour au cours du module 2</a>
-    <a href="module_3_cours.html">Aller au cours du module 3 <span class="pixelarticons--arrow-right"></span></a>
-  </nav>
+  <div class="container">
+    <header>
+      <h1>🎮 Exercice 2 : Flux d'une requête</h1>
+    </header>
 
-</body>
+    <h2>Glisse et dépose les éléments dans le bon ordre pour reconstituer le flux d'une requête MVC !</h2>
 
-</html>
+    <div class="progress">
+      <div class="progress-text">Progression : <span id="progress-text">0/4</span></div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill">0%</div>
+      </div>
+    </div>
+
+    <div class="drag-zone">
+      <h3>📦 Éléments à placer :</h3>
+      <ul class="drag-items">
+        <li class="pdrag" draggable="true" data-value="routeur">🔀 Le Routeur</li>
+        <li class="pdrag" draggable="true" data-value="controller">🎮 Le Controller</li>
+        <li class="pdrag" draggable="true" data-value="modele">💾 Le Modèle</li>
+        <li class="pdrag" draggable="true" data-value="vue">📺 La Vue</li>
+      </ul>
+    </div>
+
+    <div class="drop-zone">
+      <div class="flux-text">
+        <p><strong>Le flux d'une requête a lieu de cette manière :</strong></p>
+        <p>Dans un premier temps, l'information se propage via 
+          <span class="target" data-expected="routeur"></span>
+        </p>
+        <p>Ces informations sont ensuite transmises vers 
+          <span class="target" data-expected="controller"></span>
+        </p>
+        <p>Qui, après avoir validé ces données, les enverra vers 
+          <span class="target" data-expected="modele"></span>
+        </p>
+        <p>Qui, après avoir lu et traité ces données, permettra à 
+          <span class="target" data-expected="vue"></span> 
+          de les présenter au public</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn btn-validate" id="validate-btn">✅ Vérifier ma réponse</button>
+      <button class="btn btn-reset" id="reset-btn">🔄 Recommencer</button>
+    </div>
+
+    <div class="feedback hidden" id="feedback"></div>
+
+    <nav class="navigation">
+      <a href="module_2_cours.html">
+        <span class="arrow">⬅</span>
+        Retour au cours du module 2
+      </a>
+      <a href="module_3_cours.html">
+        Aller au cours du module 3
+        <span class="arrow">➡</span>
+      </a>
+    </nav>
+  </div>
