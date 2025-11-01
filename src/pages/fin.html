@@ -9,71 +9,123 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&display=swap" rel="stylesheet">
 
-    <link href="../css/module_1.css" rel="stylesheet">
-    <link href="../css/icons.css" rel="stylesheet">
+    <link href="../css/fin.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <header>
-        <h1><span class="pixelarticons--book-open"></span>Félicitations !</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>
+                <span class="trophy">🏆</span>
+                Félicitations !
+                <span class="trophy">🏆</span>
+            </h1>
+        </header>
 
-    <main>
-        <section class="coursM">
-            <h2>Vous avez terminé l'aventure MVC !</h2>
-            <p>Voici un résumé de ce que vous avez appris :</p>
-            <div class="summary">
-                <h3>Module 1: Les Rôles du MVC</h3>
-                <ul>
-                    <li><strong>Modèle :</strong> Gère les données et la logique métier.</li>
-                    <li><strong>Vue :</strong> Affiche les données à l'utilisateur.</li>
-                    <li><strong>Contrôleur :</strong> Gère les entrées de l'utilisateur et interagit avec le modèle et
-                        la vue.</li>
-                </ul>
+        <main>
+            <section class="coursM">
+                <h2>🎉 Vous avez terminé l'aventure MVC ! 🎉</h2>
+                <p class="intro-text">
+                    Voici un résumé complet de votre parcours d'apprentissage de l'architecture MVC :
+                </p>
 
-                <h3>Module 2: Flux d'une Requête</h3>
-                <ol>
-                    <li>L'utilisateur initie une requête.</li>
-                    <li>Le contrôleur reçoit la requête.</li>
-                    <li>Le contrôleur interroge le modèle.</li>
-                    <li>Le modèle prépare les données.</li>
-                    <li>Le contrôleur transmet les données à la vue.</li>
-                    <li>La vue génère la page.</li>
-                    <li>Le contrôleur renvoie la réponse.</li>
-                </ol>
+                <div class="summary">
+                    <div class="module-card">
+                        <h3>
+                            <span class="module-number">1</span>
+                            Les Rôles du MVC
+                        </h3>
+                        <ul>
+                            <li><strong>Modèle :</strong> Gère les données et la logique métier</li>
+                            <li><strong>Vue :</strong> Affiche les données à l'utilisateur</li>
+                            <li><strong>Contrôleur :</strong> Gère les entrées utilisateur et coordonne</li>
+                        </ul>
+                    </div>
 
-                <h3>Module 3: Le Rôle du Contrôleur</h3>
-                <ul>
-                    <li>Point d'entrée des actions de l'utilisateur.</li>
-                    <li>Coordinateur des tâches.</li>
-                    <li>Gestion des entrées utilisateur.</li>
-                </ul>
+                    <div class="module-card">
+                        <h3>
+                            <span class="module-number">2</span>
+                            Flux d'une Requête
+                        </h3>
+                        <ol>
+                            <li>L'utilisateur initie une requête</li>
+                            <li>Le contrôleur reçoit la requête</li>
+                            <li>Le contrôleur interroge le modèle</li>
+                            <li>Le modèle prépare les données</li>
+                            <li>Le contrôleur transmet à la vue</li>
+                            <li>La vue génère la page</li>
+                            <li>Le contrôleur renvoie la réponse</li>
+                        </ol>
+                    </div>
 
-                <h3>Module 4: Le Rôle du Modèle</h3>
-                <ul>
-                    <li>Gère les données et la logique métier.</li>
-                    <li>Interagit avec la base de données.</li>
-                    <li>Indépendant de l'interface utilisateur.</li>
-                </ul>
+                    <div class="module-card">
+                        <h3>
+                            <span class="module-number">3</span>
+                            Le Rôle du Contrôleur
+                        </h3>
+                        <ul>
+                            <li><strong>Point d'entrée</strong> des actions de l'utilisateur</li>
+                            <li><strong>Coordinateur</strong> des tâches entre composants</li>
+                            <li><strong>Gestionnaire</strong> des entrées utilisateur</li>
+                        </ul>
+                    </div>
 
-                <h3>Module 5: Le Rôle de la Vue</h3>
-                <ul>
-                    <li>Affiche les données.</li>
-                    <li>Permet l'interaction avec l'utilisateur.</li>
-                    <li>Sépare la présentation de la logique.</li>
-                </ul>
+                    <div class="module-card">
+                        <h3>
+                            <span class="module-number">4</span>
+                            Le Rôle du Modèle
+                        </h3>
+                        <ul>
+                            <li><strong>Gère</strong> les données et la logique métier</li>
+                            <li><strong>Interagit</strong> avec la base de données</li>
+                            <li><strong>Indépendant</strong> de l'interface utilisateur</li>
+                        </ul>
+                    </div>
 
-                <h3>Module 6: Le Flux Complet</h3>
-                <p>Vous avez maintenant une compréhension complète du fonctionnement de l'architecture MVC, de la
-                    requête initiale de l'utilisateur à la réponse finale du serveur.</p>
-            </div>
-            <a href="../../Cours_Architecture_MVC.pdf" download>Télécharger le résumé en PDF</a>
-        </section>
-        <nav class="navigation">
-            <a href="../index.html"><span class="pixelarticons--arrow-left"></span> Retour à l'accueil</a>
-        </nav>
-    </main>
+                    <div class="module-card">
+                        <h3>
+                            <span class="module-number">5</span>
+                            Le Rôle de la Vue
+                        </h3>
+                        <ul>
+                            <li><strong>Affiche</strong> les données de manière visuelle</li>
+                            <li><strong>Permet</strong> l'interaction avec l'utilisateur</li>
+                            <li><strong>Sépare</strong> la présentation de la logique</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card finale-card">
+                        <h3>
+                            <span class="module-number">6</span>
+                            Le Flux Complet
+                        </h3>
+                        <p>
+                            Vous maîtrisez maintenant l'architecture MVC de bout en bout ! 
+                            De la requête initiale à la réponse finale, vous comprenez comment 
+                            chaque composant interagit pour créer une application web robuste et maintenable.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <a href="../../Cours_Architecture_MVC.pdf" download class="btn-download">
+                        📥 Télécharger le résumé PDF
+                    </a>
+                    <a href="../index.html" class="btn-restart">
+                        🔄 Recommencer l'aventure
+                    </a>
+                </div>
+            </section>
+
+            <nav class="navigation">
+                <a href="../index.html">
+                    <span class="arrow">⬅</span>
+                    Retour à l'accueil
+                </a>
+            </nav>
+        </main>
+    </div>
 </body>
 
 </html>

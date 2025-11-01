@@ -1,0 +1,357 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* CSS ENV VARIABLES */
+        :root {
+            --font-family: "Press Start 2P", cursive;
+            --font-family-2: "Jersey 10", sans-serif;
+            --bg-color: #222831;
+            --bg-color-alt: #1c1c1c;
+            --text-color: #FFCA1C;
+            --text-color-alt: #393e46;
+            --primary-color: #00adb5;
+            --primary-color-alt: #0096c5;
+            --secondary-color: #393e46;
+            --secondary-color-alt: #515a61;
+            --accent-color: #ff7f00;
+            --accent-color-alt: #ffc107;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+                background: url("/src/images/background1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* HEADER ANIMÉ */
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        header h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: clamp(18px, 5vw, 28px);
+            text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .trophy {
+            font-size: 2em;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes glow {
+            from { text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black; }
+            to { text-shadow: -5px 0 var(--accent-color), 0 5px var(--accent-color), 5px 0 var(--accent-color), 0 -5px var(--accent-color); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scale-anim {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.95); }
+            100% { transform: scale(1); }
+        }
+
+        /* SECTION PRINCIPALE */
+        .coursM {
+            background-color: #FFCA1C;
+            border: 10px solid black;
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            color: black;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .coursM h2 {
+            font-size: clamp(16px, 3.5vw, 22px);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: clamp(11px, 2.5vw, 14px);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            line-height: 2;
+        }
+
+        /* CARTES MODULES */
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .module-card {
+            background-color: white;
+            border: 5px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease both;
+        }
+
+        .module-card:nth-child(1) { animation-delay: 0.4s; }
+        .module-card:nth-child(2) { animation-delay: 0.5s; }
+        .module-card:nth-child(3) { animation-delay: 0.6s; }
+        .module-card:nth-child(4) { animation-delay: 0.7s; }
+        .module-card:nth-child(5) { animation-delay: 0.8s; }
+        .module-card:nth-child(6) { animation-delay: 0.9s; }
+
+        .module-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 173, 181, 0.4);
+            border-color: var(--accent-color);
+        }
+
+        .module-card h3 {
+            font-size: clamp(10px, 2vw, 13px);
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .module-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            flex-shrink: 0;
+        }
+
+        .module-card ul,
+        .module-card ol {
+            list-style-position: inside;
+            text-align: left;
+        }
+
+        .module-card ul {
+            list-style-type: none;
+        }
+
+        .module-card li {
+            font-size: clamp(8px, 1.8vw, 11px);
+            margin: 0.8rem 0;
+            padding: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+            background-color: rgba(0, 173, 181, 0.05);
+            border-radius: 4px;
+        }
+
+        .module-card ul li:before {
+            content: "▸";
+            position: absolute;
+            left: 0.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .module-card ol {
+            counter-reset: item;
+            list-style-type: none;
+        }
+
+        .module-card ol li {
+            counter-increment: item;
+            padding-left: 2rem;
+        }
+
+        .module-card ol li:before {
+            content: counter(item);
+            position: absolute;
+            left: 0.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7em;
+        }
+
+        .module-card strong {
+            color: var(--primary-color);
+            font-size: 1em;
+        }
+
+        .module-card p {
+            font-size: clamp(8px, 1.8vw, 11px);
+            line-height: 1.8;
+            padding: 1rem;
+            margin: 0;
+            text-align: left;
+        }
+
+        /* FINALE CARD */
+        .finale-card {
+    background: linear-gradient(135deg, #000000 0%, #6d5818 100%);
+    border-color: var(--accent-color);
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+        .finale-card h3 {
+            color: white;
+            border-bottom-color: white;
+        }
+
+
+        /* ACTIONS */
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            animation: fadeInUp 1s ease 1s both;
+        }
+
+        .btn-download,
+        .btn-restart {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: clamp(9px, 2vw, 12px);
+            border: 4px solid black;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            font-family: var(--font-family);
+        }
+
+        .btn-download {
+            background-color: var(--accent-color);
+        }
+
+        .btn-download:hover,
+        .btn-restart:hover {
+            animation: scale-anim 1.4s infinite;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        /* NAVIGATION */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+            animation: fadeInUp 1s ease 1.2s both;
+        }
+
+        .navigation a {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: var(--text-color);
+            background-color: black;
+            border-radius: 8px;
+            padding: 1rem 2rem;
+            font-size: clamp(9px, 2vw, 12px);
+            transition: all 0.3s ease;
+        }
+
+        .navigation a:hover {
+            animation: scale-anim 1.4s infinite;
+            background-color: var(--bg-color-alt);
+        }
+
+        .arrow {
+            font-size: 1.5em;
+        }
+
+    
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .coursM {
+                padding: 1.5rem;
+            }
+
+            .summary {
+                grid-template-columns: 1fr;
+            }
+
+            .actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-download,
+            .btn-restart {
+                justify-content: center;
+            }
+        }

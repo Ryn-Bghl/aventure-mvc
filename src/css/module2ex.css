@@ -279,7 +279,7 @@ body {
       font-size: clamp(8px, 1.5vw, 11px);
       transition: all 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
     }
 
     .btn:hover {
@@ -298,6 +298,11 @@ body {
     .btn-reset {
       background-color: var(--accent-color-alt);
       color: black;
+    border: 3px solid black;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     .feedback {
@@ -353,7 +358,6 @@ body {
       border-radius: 4px;
       font-size: clamp(8px, 1.5vw, 11px);
       transition: all 0.3s ease;
-      border: 3px solid var(--primary-color);
       flex: 1;
       text-align: center;
       min-width: 200px;
