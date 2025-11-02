@@ -180,9 +180,9 @@ document.getElementById("checkBtn").addEventListener("click", checkAnswers);
 const helpToggle = document.getElementById("helpToggle");
 helpToggle.addEventListener("click", () => {
   helpMode = !helpMode;
-  helpToggle.textContent = "Aide : " + (helpMode ? "OFF" : "ON");
+  helpToggle.textContent = "Aide : " + (helpMode ? "ON" : "OFF");
   helpToggle.setAttribute("aria-pressed", String(helpMode));
-  feedback("Mode Aide : " + (helpMode ? "Désactivé" : "Activé"));
+  feedback("Mode Aide : " + (helpMode ? "Activé" : "Désactivé"));
 });
 
 function checkAnswers() {
