@@ -1,18 +1,14 @@
 // Données initiales : liste des cartes avec réponse attendue
 const initialCards = [
-  { id: 1, text: "📦 Requête SQL: SELECT * FROM users", answer: "M" },
-  { id: 2, text: '🎨 HTML: bouton "Envoyer"', answer: "V" },
-  { id: 3, text: "🧭 Fonction qui gère le clic utilisateur", answer: "C" },
-  { id: 4, text: "📦 Classe User(id, name, email)", answer: "M" },
-  { id: 5, text: "🎨 CSS: style pour le texte en rouge", answer: "V" },
-  { id: 6, text: "🧭 Vérifie si l'utilisateur est connecté", answer: "C" },
-  {
-    id: 7,
-    text: "📦 Migration: table users (id, email, password)",
-    answer: "M",
-  },
-  { id: 8, text: "🎨 Rendu template avec données utilisateur", answer: "V" },
-  { id: 9, text: "🧭 Route qui appelle le contrôleur", answer: "C" },
+  { id: 1, text: " Requête SQL: SELECT * FROM users", answer: "M" },
+  { id: 2, text: ' HTML: bouton "Envoyer"', answer: "V" },
+  { id: 3, text: " Fonction qui gère le clic utilisateur", answer: "C" },
+  { id: 4, text: " Classe User(id, name, email)", answer: "M" },
+  { id: 5, text: " CSS: style pour le texte en rouge", answer: "V" },
+  { id: 6, text: " Vérifie si l'utilisateur est connecté", answer: "C" },
+  {id: 7,text: " Migration: table users (id, email, password)",answer: "M",},
+  { id: 8, text: " Rendu template avec données utilisateur", answer: "V" },
+  { id: 9, text: " Route qui appelle le contrôleur", answer: "C" },
 ];
 
 const piecesContainer = document.getElementById("pieces");
