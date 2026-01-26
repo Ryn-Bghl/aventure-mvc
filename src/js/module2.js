@@ -128,11 +128,11 @@
       });
 
       if (filledCount === 0) {
-        showFeedback('⚠️ Place d\'abord les éléments dans les zones de dépôt !', 'error');
+        showFeedback(' Place d\'abord les éléments dans les zones de dépôt !', 'error');
       } else if (allCorrect) {
-        showFeedback('🎉 Félicitations ! Tu as parfaitement compris le flux d\'une requête MVC ! Le routeur reçoit la requête, le controller la traite, le modèle gère les données, et la vue affiche le résultat !', 'success');
+        showFeedback(' Félicitations ! Tu as parfaitement compris le flux d\'une requête MVC ! Le routeur reçoit la requête, le controller la traite, le modèle gère les données, et la vue affiche le résultat !', 'success');
       } else {
-        showFeedback('❌ Certaines réponses sont incorrectes. Réessaie ! Rappel : Routeur → Controller → Modèle → Vue', 'error');
+        showFeedback(' Certaines réponses sont incorrectes. Réessaie ! Rappel : Routeur → Controller → Modèle → Vue', 'error');
       }
     });
 
